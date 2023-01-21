@@ -1,0 +1,8 @@
+/.localenv
+
+/cachedir
+/workdir
+/distdir
+/cdndist
+
+/_dist
