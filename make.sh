@@ -10,10 +10,10 @@ REPODIR="$PWD"
 if [[ -e $1/info ]]; then
     id="$(basename $1)"
     TARGET_ID="$(dirname $1)/$id"
-    bash src/fbuild.sh $TARGET_ID full
+    bash src/fbuild.sh $TARGET_ID full || exit 1
     echo "-----------------------------------"
     echo "Run this command to upload:"
-    echo "$ " bash $0 cdndist/awfl-cdn/css/$id.css cdndist/awfl-cdn/$TARGET_ID/*
+    echo "$ " bash $0 "cdndist/awfl-cdn/css/$id.css" "cdndist/awfl-cdn/$TARGET_ID/*"
     echo "-----------------------------------"
     if [[ $IMPLICIT_UPLOADING == y ]]; then
         bash $0 cdndist/awfl-cdn/css/$id.css cdndist/awfl-cdn/$TARGET_ID/*

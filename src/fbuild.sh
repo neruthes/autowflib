@@ -94,7 +94,8 @@ function src_fetch() {
     fi
     mkdir -pv "$(dirname "$download_path")"
     log INFO curl "$download" -o "$download_path"
-    curl "$download" -o "$download_path"
+    http_user_agent_str='User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/109.0'
+    wget "$download" -O "$download_path"
 }
 
 function src_verify() {
@@ -142,8 +143,16 @@ function src_build() {
 }
 
 function webfont_collect() {
-    for fn in $(find "$workdir/build" -name "*.woff2"); do
+    function collect_woff2_file() {
+        woffid="$(basename "$fn" | sed 's|.woff2$||')"
+        if [[ -z "$(grep ":$woffid$" <<< "$weight_map")" ]]; then
+            echo "**  debug:  There is no weightmap entry for this file '$woffid'" >&2
+            return 0
+        fi
         mv -v "$fn" "$workdir/output/$(basename "$fn")"
+    }
+    for fn in $(find "$workdir/build" -name "*.woff2"); do
+        collect_woff2_file
     done
     log INFO "Current workdir:"
     tree "$workdir"
@@ -162,20 +171,29 @@ function css_generate() {
             printf ", url('$prefix/awfl-cdn/$TARGET_ID/$1.woff2') format('woff2')"
         done
     }
-    for woff in "$workdir/output"/*.woff2; do
-        woffid="$(sed 's|.woff2$||' <<< $(basename "$woff"))"       # E.g. C059-Roman
-        this_woff_font_style="normal"
-        grep -qs "i:$woffid$" <<< "$weight_map" && this_woff_font_style="italic"
+    function gen_fontface_list() {
+        for woff in "$workdir/output"/*.woff2; do
+            woffid="$(sed 's|.woff2$||' <<< $(basename "$woff"))"       # E.g. C059-Roman
+            echo "**  debug:  woffid=$woffid" >&2
+            this_woff_font_style="normal"
+            if [[ -z "$(grep ":$woffid$" <<< "$weight_map")" ]]; then
+                echo "**  debug:  There is no weightmap entry for this file!" >&2
+                return 0
+            fi
+            grep -qs "i:$woffid$" <<< "$weight_map" && this_woff_font_style="italic"
 
-        ### Warning: Cursed indentation
-        echo "@font-face {
-    font-family: '$family';
-    font-weight: $(grep ":$woffid$" <<< "$weight_map" | cut -c1-3);
-    font-style: $this_woff_font_style;
-    src: $(gen_src_list "$woffid" | cut -c3-);
-}
-" >> "$csspath"
-    done
+
+            ### Warning: Cursed indentation
+            echo "@font-face {
+                font-family: '$family';
+                font-weight: $(grep ":$woffid$" <<< "$weight_map" | cut -c1-3);
+                font-style: $this_woff_font_style;
+                src: $(gen_src_list "$woffid" | cut -c3-);
+            }
+            " >> "$csspath"
+        done
+    }
+    gen_fontface_list
 
     log INFO cat "$csspath"
     cat "$csspath"
@@ -184,6 +202,8 @@ function css_generate() {
 function artifacts_install() {
     distdir="distdir/$TARGET_ID"
 
+    ### Clean old files in distdir
+    find "$distdir" -mindepth 1 -delete
     ### Write into distdir
     rsync -av --delete --mkpath "$workdir/output/" "$distdir/"
 

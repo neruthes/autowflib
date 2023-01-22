@@ -52,20 +52,20 @@ weight_map="400:C059-Roman
 
 This file (as a shell script) shall contain these variables:
 
-| Variable Name    | Description                                                                                               |
-| ---------------- | --------------------------------------------------------------------------------------------------------- |
-| `id`             | The machine-friendly identifier. Must be unique across all categories.                                    |
-| `family`         | The human-friendly family name. Must be equal to the one read from OTF/TTF metadata.                      |
-| `cat`            | Category identifier, like `serif-trans`.                                                                  |
-| `about`          | Short description.                                                                                        |
-| `license`        | Must be `GPL` or `OFL`. More to add in future.                                                            |
-| `download`       | Upstream archive file URL.                                                                                |
-| `format`         | Format of the archive file. Can be `zip`. More to add in future.                                          |
-| `sha256`         | Expected SHA-256 hash of the archive file. Encoded hexadecimal.                                           |
-| `infopage`       | The introduction webpage.                                                                                 |
-| `convert_from`   | Use font files in this format to generate WOFF2.                                                          |
-| `convert_subdir` | Only use the files which reside in this sub-directory (relative to the extraction root `$workdir/build`). |
-| `weight_map`     | A **weight map**, whose format is documented in a later section.                                          |
+| Variable Name    | Description                                                                                                      |
+| ---------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `id`             | The machine-friendly identifier. Must be unique across all categories.                                           |
+| `family`         | The human-friendly family name. Must be equal to the one read from OTF/TTF metadata.                             |
+| `cat`            | Category identifier, like `serif-trans`.                                                                         |
+| `about`          | Short description.                                                                                               |
+| `license`        | Must be `GPL` or `OFL`. More to add in future.                                                                   |
+| `download`       | Upstream archive file URL.                                                                                       |
+| `format`         | Format of the archive file. Can be `zip`. More to add in future.                                                 |
+| `sha256`         | Expected SHA-256 hash of the archive file. Encoded hexadecimal.                                                  |
+| `infopage`       | The introduction webpage.                                                                                        |
+| `convert_from`   | Convert from this format to WOFF2. Can be `otf`, `skip`. Magic `skip`: Zip includes WOFF2.                       |
+| `convert_subdir` | (TODO) Only use the files which reside in this sub-directory (relative to the extraction root `$workdir/build`). |
+| `weight_map`     | A **weight map**, whose format is documented in a later section.                                                 |
 
 
 

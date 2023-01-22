@@ -7,10 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         #page {
+            font-weight: 400;
             max-width: 900px;
             padding: 40px;
             margin: 0 auto;
             text-align: justify;
+        }
+        strong {
+            font-weight: 600;
         }
 
     </style>
@@ -109,10 +113,11 @@
             });
         };
         if (params.id && params.family) {
+            const realFamily = decodeURIComponent(params.family);
             cssTag.innerHTML += `@import url('https://autowflibcdn.pages.dev/${params.cdnid || 'awfl-cdn'}/css/${params.id}.css');`
-            cssTag.innerHTML += `#page { font-family: '${params.family}', 'Comic Neue'}`;
+            cssTag.innerHTML += `#page { font-family: '${realFamily}', 'Comic Neue'}`;
             document.querySelectorAll('.insert-family-name').forEach(function (span) {
-                span.innerHTML = params.family;
+                span.innerHTML = realFamily;
             });
         };
     </script>
