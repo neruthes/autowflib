@@ -2,6 +2,9 @@
 
 An addition to Google Fonts.
 
+Some fonts are not available on Google Fonts, and the submission-approval process can destroy patience.
+Perhaps this place is an alternative home.
+
 Website: https://autowflib.pages.dev/
 
 ## Font Inclusion
