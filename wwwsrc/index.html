@@ -236,7 +236,7 @@
 
             // Load data
             const xhr = new XMLHttpRequest();
-            xhr.open('GET', '/font-family-datamap.txt');
+            xhr.open('GET', './font-family-datamap.txt');
             xhr.onload = function () {
                 let arr = xhr.responseText.trim().split('\n');
                 arr.forEach(function (dataline) {

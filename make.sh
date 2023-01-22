@@ -95,6 +95,7 @@ case $1 in
         du -xhd2 wwwdist
         ;;
     pkgdist | pkgdist/)
+        cd $REPODIR/wwwdist && tar -cf $REPODIR/pkgdist/wwwdist.tar .
         cd $REPODIR/cdndist && tar --xz -cf $REPODIR/pkgdist/cdn-mirror.tar.xz awfl-cdn
         cd $REPODIR
         tar --xz -cf $REPODIR/pkgdist/definitions.tar.xz $REPODIR/fonts
@@ -132,6 +133,12 @@ case $1 in
     initdb)
         rm wwwextra/r2uploadtime.db
         echo "create table FnTimeMap(fn TEXT PRIMARY KEY, time INT)" | sqlite3 wwwextra/r2uploadtime.db
+        ;;
+    '')
+        bash $0 wwwdist pkgdist cf
+        git add .
+        git commit -m "Automatic deploy command: $(TZ=UTC date -Is | cut -c1-19 | sed 's/T/ /')"
+        git push
         ;;
     *)
         echo "[ERROR] No rule to make '$1'. Stop."

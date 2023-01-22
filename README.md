@@ -29,7 +29,7 @@ The font being submitted for inclusion in this repository must satisfy the follo
 
 ### Pull Requests
 
-Our workflow is similar to GNU/Linux distro software packaging.
+Our workflow is similar to software packaging in GNU/Linux communities.
 
 Suppose that you are going to submit a font "My First Font" under category "sans-humanist".
 
@@ -55,10 +55,21 @@ Steps for making a good pull request:
 
 Copyright (c) 2023 Neruthes, and other contributors.
 
+The source code and documentation included in this repository are published with
+[GNU AGPL 3.0](https://www.gnu.org/licenses/agpl-3.0.html).
+These specifically include: all Markdown documents (`.md`, including this one),
+all shell scripts (`.sh`), and the entire `/wwwsrc` directory.
+
+The image assets (`png` and `jpg`) are published with
+[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+
 ### The Collected Fonts
 
 The collected fonts are copyrighted by their original owners.
 We at this project merely make the font files easier for web usage.
 
-For any collected font, our WOFF2 artifacts are released with the same license which the original font files come with.
+The names of the fonts may be trademarks of their respective owners.
+
+For any collected font, our WOFF2 artifacts are released with the same license
+which the original font files come with (share-alike).
 And our CSS artifacts are released under the MIT license.

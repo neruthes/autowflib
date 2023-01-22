@@ -114,6 +114,8 @@ Available local minor categories by allowed range:
 - misc
   - `deco`: Not letters, but symbols. E.g. Webdings, FontAwesome.
 
+The categories defined above may still lack some aspects of real-world typography.
+If you have any particular category in mind, please recommend it by opening an issue.
 
 
 

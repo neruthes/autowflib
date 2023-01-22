@@ -127,11 +127,6 @@ function src_build() {
             log INFO "This font does not require any conversion."
         return 0
             ;;
-        # otf)
-        #     for fn in $(find "$workdir/build" -name "*.otf") $(find "$workdir/build" -name "*.OTF"); do
-        #         mv -v "$fn" "$workdir/build/$(otfinfo -p "$fn").otf"
-        #     done
-        #     ;;
         otf|ttf)
             IFS=$'\n'
             for fn in $(find "$workdir/build" -name "*.$convert_from") $(find "$workdir/build" -name "*.${convert_from^^}"); do
@@ -172,7 +167,6 @@ function css_generate() {
 
     ### The following code may be migrated to an independent function or script in future
     function gen_src_list() {
-        # wofffn="$1"
         prefix_list_length="$(wc -l <(echo "$CDN_PREFIX_LIST"))"
         for prefix in $CDN_PREFIX_LIST; do
             log INFO "Using prefix: $prefix" >&2
