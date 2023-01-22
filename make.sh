@@ -136,6 +136,8 @@ case $1 in
         ;;
     '')
         bash $0 wwwdist pkgdist pkgdist/wwwdist.tar cf
+        cfoss pkgdist/wwwdist.tar
+        bash $0 cf
         git add .
         git commit -m "Automatic deploy command: $(TZ=UTC date -Is | cut -c1-19 | sed 's/T/ /')"
         git push
