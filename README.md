@@ -9,6 +9,9 @@ Website: [https://autowflib.pages.dev/](https://autowflib.pages.dev/).
 
 The website shows the complete list of collected fonts and supports searching by font name.
 
+CSS/WOFF2 artifacts are served over Cloudflare CDN and hosted on Cloudflare Pages.
+
+
 
 
 

@@ -223,7 +223,7 @@ function artifacts_install() {
 
 function workdir_cleanup() {
     [[ $NO_CLEANUP == y ]] && return 0
-    find "$workdir" -mindepth 1 -delete
+    find "$workdir" -delete
 }
 
 
