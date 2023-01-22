@@ -37,14 +37,14 @@ Steps for making a good pull request:
 
 - Fork this repo.
 - Clone to your machine.
-- Create the `/fonts/sans-humanist/my-first-font/info` file according to [FontSpecFormat.md](docs/FontSpecFormat.md). (Also refer to the definitions of other fonts.)
+- Create the `/fonts/sans-humanist/my-first-font/info` file according to [FontSpecFormat.md](docs/FontSpecFormat.md). Refer to the definitions of other fonts when in doubt. Also, the `/addfont.sh` interactive script can make the creation of the `info` file more friendly.
 - Create a `build.sh` file along with it, only if necessary.
 - Run `./make.sh fonts/sans-humanist/my-first-font`.
 - Make sure that the command above produces expected WOFF2 files and CSS files in `/distdir/fonts/sans-humanist/my-first-font`.
 - Commit, push, and create a pull request.
 - Include the generated log file `buildlog.txt` in the pull request as an attachment.
 
-Alternatively, the `/addfont.sh` interactive script can make the creation of the `info` file more friendly.
+
 
 
 
