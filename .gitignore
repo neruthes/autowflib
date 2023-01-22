@@ -4,5 +4,10 @@
 /workdir
 /distdir
 /cdndist
+/pkgdist
+
+/wwwextra
+/wwwdist
 
 /_dist
+/.testdir

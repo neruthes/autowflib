@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>AutoWFLib Project | Automated Web Font Library</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        #page {
+            max-width: 900px;
+            padding: 40px;
+            margin: 0 auto;
+            text-align: justify;
+        }
+
+    </style>
+    <style id="preview-css">
+
+    </style>
+</head>
+
+<body>
+    <div id="page">
+        <h1>Web Font Preview: <span class="insert-family-name"></span></h1>
+
+        <p style="font-size: 1.4rem;">
+            <strong>No one shall be subjected to arbitrary arrest, detention or exile.</strong><br>
+            Everyone is entitled in full equality to a fair and public hearing by an independent and impartial tribunal,
+            in the determination of his rights and obligations and of any criminal charge against him.
+        </p>
+
+        <p style="font-size: 1.2rem;">
+            <strong>Everyone has the right to freedom of thought, conscience and religion;</strong><br>
+            <em>this right includes freedom to change his religion or belief</em>, and freedom, either alone or in
+            community with others and in public or private, to manifest his religion or belief in teaching, practice,
+            worship and observance.
+        </p>
+
+        <p style="font-size: 1rem;">
+            <strong>Common Latin Text</strong>: Everyone has the right to freedom of thought, conscience and religion;
+            this right includes freedom to change his religion or belief, and freedom, either alone or in community with
+            others and in public or private, to manifest his religion or belief in teaching, practice, worship and
+            observance. Everyone has the right to freedom of opinion and expression; this right includes freedom to hold
+            opinions without interference and to seek, receive and impart information and ideas through any media and
+            regardless of frontiers.
+        </p>
+
+        <p style="font-size: 1rem;">
+            <strong>Ελληνική αλφάβητο</strong>: Η Αγία Σοφιά ή Αγιά Σοφιά, επισήμως αποκαλούμενη εκκλησία της Αγίας
+            Σοφίας, γνωστή και ως Ναός της Αγίας του Θεού Σοφίας ή απλά, η Μεγάλη Εκκλησία, είναι ιστορικός τόπος
+            λατρείας της Κωνσταντινούπολης, <em>ο οποίος λειτούργησε ως χριστιανικός ναός από το 537 μέχρι το 1453</em>.
+            Στη
+            συνέχεια μετετράπη σε ισλαμικό τέμενος και αργότερα (από το 1935) σε μουσείο. Από το 2020, έπειτα από την
+            απόφαση του Τούρκου προέδρου Ρετζέπ Ταγίπ Ερντογάν, το τέμενος λειτουργεί πάλι ως τζαμί.
+        </p>
+
+        <p style="font-size: 1rem;">
+            <strong>CJK</strong>:
+            力微任重久神疲，再竭衰庸定不支。
+            苟利国家生死以，岂因祸福避趋之。
+            谪居正是君恩厚，养拙刚于戍卒宜。
+            戏与山妻谈故事，试吟断送老头皮。
+            <br>
+            <!-- この番組はご覧のスポンサーの提供でお送りします。 -->
+            一日一夜に月は照らずとも。
+            悲伤しみに鵺鸟鸣く。
+            吾がかへり见すれど。
+            花は散りぬべし。
+            慰むる心は。
+            消ぬるがごとく。
+            新世に神集ひて。
+            夜は明け。
+            鵺鸟鸣く。
+            咲く花は。
+            神に祈ひ祷む。
+            生ける世に。
+            我が身悲しも。
+            梦は消ぬ。
+            怨恨みて散る。
+            <br>
+            아침은 빛나라 이 강산, 은금에 자원도 가득한. 삼천리 아름다운 내 조국, 반만년 오랜 력사에.
+            찬란한 문화로 자라난 슬기론 인민의 이 영광. 몸과 맘 다 바쳐 이 조선 길이 받드세.
+        </p>
+
+        <p style="font-size: 0.8rem;">
+            <span style="text-transform: small-caps;">Everyone has the right to freedom of thought, conscience and
+                religion</span>; this right includes freedom to change his religion or belief, and freedom, either alone
+            or in community with others and in public or private, to manifest his religion or belief in teaching,
+            practice, worship and observance. Everyone has the right to freedom of opinion and expression; this right
+            includes freedom to hold opinions without interference and to seek, receive and impart information and ideas
+            through any media and regardless of frontiers. Everyone has the right to rest and leisure, including
+            reasonable limitation of working hours and periodic holidays with pay.
+        </p>
+
+        <p>
+            The paragraphs above are adopted to demonstrate the visual characteristics of the font
+            <strong class="insert-family-name"></strong>
+            and shall not be subjected to political interpretations.
+        </p>
+    </div>
+
+    <script>
+        const cssTag = document.querySelector('#preview-css');
+        const params = {};
+        if (location.search.length > 4) {
+            location.search.slice(1).split('&').forEach(function (kvstr) {
+                const [k, v] = kvstr.split('=');
+                params[k] = v;
+            });
+        };
+        if (params.id && params.family) {
+            cssTag.innerHTML += `@import url('https://autowflibcdn.pages.dev/${params.cdnid || 'awfl-cdn'}/css/${params.id}.css');`
+            cssTag.innerHTML += `#page { font-family: '${params.family}', 'Comic Neue'}`;
+            document.querySelectorAll('.insert-family-name').forEach(function (span) {
+                span.innerHTML = params.family;
+            });
+        };
+    </script>
+</body>
+
+</html>

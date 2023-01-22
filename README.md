@@ -11,3 +11,12 @@ The font being submitted for inclusion in this repository must satisfy the follo
 - It is differentiated enough from its upstream (if it is a fork of another open source font).
 - If the submission is not made by the font creator itself,
 
+
+
+## Copyright
+
+### The AutoWFLib Project
+
+Copyright (c) 2023 Neruthes, and other contributors.
+
+### The Collected Fonts

@@ -155,14 +155,15 @@ function css_generate() {
 
     ### The following code may be migrated to an independent function or script in future
     function gen_src_list() {
+        # wofffn="$1"
         prefix_list_length="$(wc -l <(echo "$CDN_PREFIX_LIST"))"
         for prefix in $CDN_PREFIX_LIST; do
             log INFO "Using prefix: $prefix" >&2
-            printf ", url('$prefix/awfl-cdn/$TARGET_ID.css') format('woff2')"
+            printf ", url('$prefix/awfl-cdn/$TARGET_ID/$1.woff2') format('woff2')"
         done
     }
     for woff in "$workdir/output"/*.woff2; do
-        woffid="$(sed 's|.woff2$||' <<< $(basename "$woff"))"
+        woffid="$(sed 's|.woff2$||' <<< $(basename "$woff"))"       # E.g. C059-Roman
         this_woff_font_style="normal"
         grep -qs "i:$woffid$" <<< "$weight_map" && this_woff_font_style="italic"
 
@@ -171,7 +172,7 @@ function css_generate() {
     font-family: '$family';
     font-weight: $(grep ":$woffid$" <<< "$weight_map" | cut -c1-3);
     font-style: $this_woff_font_style;
-    src: $(gen_src_list | cut -c3-);
+    src: $(gen_src_list "$woffid" | cut -c3-);
 }
 " >> "$csspath"
     done
@@ -187,9 +188,9 @@ function artifacts_install() {
     rsync -av --delete --mkpath "$workdir/output/" "$distdir/"
 
     ### Work with cdndist
-    mkdir -pv cdndist/autowflibcdn/css
-    rsync -av --delete --mkpath "$distdir/" "cdndist/autowflibcdn/$TARGET_ID/"
-    cat "$workdir/output/$id.css" > "cdndist/autowflibcdn/css/$id.css"
+    mkdir -pv cdndist/awfl-cdn/css
+    rsync -av --delete --mkpath "$distdir/" "cdndist/awfl-cdn/$TARGET_ID/"
+    cat "$workdir/output/$id.css" > "cdndist/awfl-cdn/css/$id.css"
 }
 
 function workdir_cleanup() {

@@ -1,0 +1,2 @@
+@family|c059|C059|serif-trans
+@list|C059-BdIta.woff2|C059-Bold.woff2|C059-Italic.woff2|C059-Roman.woff2

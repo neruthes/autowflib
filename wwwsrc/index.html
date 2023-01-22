@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>AutoWFLib Project | Automated Web Font Library</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        @import url('/full.css');
+        * {
+            text-rendering: optimizeLegibility;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            font-size: 5mm;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .grand-container {}
+
+        .big-part {
+            max-width: 42rem;
+            padding: 30px;
+            margin: 30px auto;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="grand-container">
+
+        <div class="big-part">
+            <header>
+                <h1>AutoWFLib</h1>
+                <p>Automated Web Font Library</p>
+            </header>
+            <div class="top-nav">
+            </div>
+            <div style="height: 1px; background: #BBB;"></div>
+
+            <style>
+                .fontslist-area-list {
+                    font-size: 0rem;
+                }
+
+                @media screen and (min-width: 901px) {
+                    .fontslist-item-fontInfoCard {
+                        float: left;
+                        width: 50%;
+                    }
+
+                    .fontslist-item-fontInfoCard[data-shown="true"]:nth-child(2n+0) {
+                        padding-left: 10px;
+                    }
+
+                    .fontslist-item-fontInfoCard[data-shown="true"]:nth-child(2n+1) {
+                        padding-right: 10px;
+                    }
+                }
+
+                .fontslist-item-fontInfoCard[data-shown="false"] {
+                    display: none;
+                }
+
+                .fontInfoCard--inner {
+                    font-size: 1rem;
+                    border: 1px solid #AAA;
+                    border-radius: 5px;
+                    margin: 0 0 20px;
+                    padding: 20px;
+                }
+
+                .fontInfoCard--midarea {
+                    padding: 8px 0;
+                }
+
+                .fontInfoCard--subarea {
+                    font-size: 0.7rem;
+                }
+
+                .fontInfoCard--family {
+                    font-size: 1.1rem;
+                }
+
+                .fontInfoCard--variants {
+                    float: right;
+                    font-size: 0.8rem;
+                    opacity: 0.6;
+                }
+
+                .fontInfoCard--category {
+                    font-size: 0.8rem;
+                    opacity: 0.6;
+                }
+
+            </style>
+            <div class="search-area">
+                <input id="js-mainSearchBox" type="text" placeholder="Search font name" style="
+                    font-size: 0.8rem;
+                    border: 1px solid #AAA;
+                    border-radius: 5px;
+                    display: block;
+                    width: 100%;
+                    padding: 8px;
+                    margin: 0 0 50px;
+                ">
+            </div>
+            <div class="fontslist-area">
+                <div class="fontslist-area-list"></div>
+                <div class="fontslist-area-list-appendix"></div>
+            </div>
+        </div>
+
+        <div class="big-part">
+            <footer>
+            </footer>
+        </div>
+
+    </div>
+
+    <script>
+        (function () {
+            window.app_3639cc171fa746bdbf162d44666c3fa8 = {
+                ram: {
+                    fontIdList: [],
+                    fontDataMap: {}
+                }
+            };
+            const app = window.app_3639cc171fa746bdbf162d44666c3fa8;
+
+
+
+            // App functions
+            app.renderFontsListDom = function () {
+                const listDiv = document.querySelector('.fontslist-area-list');
+                listDiv.innerHTML = app.ram.fontIdList.map(function (fontid) {
+                    const data = app.ram.fontDataMap[fontid];
+                    return `<div class="fontslist-item-fontInfoCard"
+                        data-shown="true" data-search-term=" ${data.id} ${data.family.toLowerCase()} "
+                        data-font-id="${data.id}" data-font-family="${data.family}"
+                        data-font-category="${data.category}" data-variants-count=${data.list.length}
+                    >
+                        <div class="fontInfoCard--inner">
+                            <div class="fontInfoCard--toparea">
+                                <span class="fontInfoCard--family" style="font-family: '${data.family}', sans-serif;">${data.family}</span>
+                                <span class="fontInfoCard--variants">${data.list.length} variants</span>
+                            </div>
+                                <div class="fontInfoCard--midarea">
+                                    <div class="fontInfoCard--category">${data.category}</div>
+                            </div>
+                            <div class="fontInfoCard--subarea">
+                                <a target="_blank" href="https://autowflibcdn.pages.dev/awfl-cdn/css/${data.id}.css">CSS Link</a>
+                                &nbsp;&nbsp;&nbsp;
+                                <a target="_blank" href="/preview/?id=${data.id}&family=${encodeURIComponent(data.family)}">Preview</a>
+                            </div>
+                        </div>
+                    </div>`;
+                }).join('') + '<div style="float: left; width: 50%; height: 1px;"></div>' + '<div style="clear: both;"></div>';
+            };
+            app.searchBoxInputEventHandler = function (e) {
+                const box = e.target;
+                box.dataset.dirty = 'true';
+            };
+            app.updateSearchResultList = function () {
+                console.log(`hello updateSearchResultList`);
+                const box = document.querySelector('#js-mainSearchBox');
+                const val = box.value.trim().toLowerCase();
+                if (box.dataset.dirty === 'false') {
+                    return 0;
+                };
+                box.dataset.dirty = 'false';
+                if (val.length < 2) {
+                    document.querySelectorAll('.fontslist-item-fontInfoCard').forEach(function (card) {
+                        card.dataset.shown = 'true';
+                    });
+                    return 0;
+                } else {
+                    document.querySelectorAll('.fontslist-item-fontInfoCard').forEach(function (card) {
+                        if (card.dataset.searchTerm.indexOf(val) >= 0) {
+                            console.log('card.dataset.searchTerm');
+                            console.log(card.dataset.searchTerm);
+                            console.log(card);
+                            card.dataset.shown = 'true';
+                        } else {
+                            card.dataset.shown = 'false';
+                        };
+                    });
+                };
+                if (document.querySelector('.fontslist-area-list').offsetHeight < 10) {
+                    document.querySelector('.fontslist-area-list-appendix').innerHTML = `No match found :(`;
+                } else {
+                    document.querySelector('.fontslist-area-list-appendix').innerHTML = ``;
+                }
+            };
+            document.querySelector('#js-mainSearchBox').value = '';
+            document.querySelector('#js-mainSearchBox').addEventListener('input', app.searchBoxInputEventHandler);
+            window.setInterval(app.updateSearchResultList, 150);
+
+
+
+            // Load data
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', '/font-family-datamap.txt');
+            xhr.onload = function () {
+                let arr = xhr.responseText.trim().split('\n');
+                arr.forEach(function (dataline) {
+                    console.log(dataline);
+                    if (dataline.startsWith('@family|')) {
+                        const [id, family, category] = dataline.split('|').slice(1);
+                        app.ram._currentParsingId = id;
+                        app.ram.fontIdList.push(id);
+                        app.ram.fontDataMap[id] = {
+                            id, family, category
+                        };
+                    };
+                    if (dataline.startsWith('@list|')) {
+                        const list = dataline.split('|').slice(1);
+                        app.ram.fontDataMap[app.ram._currentParsingId].list = list;
+                    };
+                });
+                console.log(app.ram);
+                app.renderFontsListDom();
+            };
+            xhr.send();
+        })();
+    </script>
+</body>
+
+</html>
