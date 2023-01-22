@@ -7,20 +7,6 @@ REPODIR="$PWD"
 
 
 
-if [[ -e $1/info ]]; then
-    id="$(basename $1)"
-    TARGET_ID="$(dirname $1)/$id"
-    (bash src/fbuild.sh $TARGET_ID full || exit 1) | tee buildlog.txt
-    echo "-----------------------------------"
-    echo "Run this command to upload:"
-    echo "$ " bash $0 "cdndist/awfl-cdn/css/$id.css" "cdndist/awfl-cdn/$TARGET_ID/*"
-    echo "-----------------------------------"
-    if [[ $IMPLICIT_UPLOADING == y ]]; then
-        bash $0 cdndist/awfl-cdn/css/$id.css cdndist/awfl-cdn/$TARGET_ID/*
-    fi
-    exit 0
-fi
-
 if [[ -e $2 ]]; then
     for i in "$@"; do
         bash "$0" "$i"
@@ -42,6 +28,17 @@ function db_insert() {
 
 
 case $1 in
+    fonts/*)
+        if [[ -e $1/info ]]; then
+            id="$(basename $1)"
+            TARGET_ID="$(dirname $1)/$id"
+            (bash src/fbuild.sh $TARGET_ID full || exit 1) | tee buildlog.txt
+            echo "-----------------------------------"
+            echo "Run this command to upload:"
+            echo "$ " bash $0 "cdndist/awfl-cdn/css/$id.css" "cdndist/awfl-cdn/$TARGET_ID/*"
+            echo "-----------------------------------"
+        fi
+        ;;
     tag)
         echo "$ git tag snapshot-$(TZ=UTC date +%Y%m%d)"
         echo "$ git push origin snapshot-$(TZ=UTC date +%Y%m%d)"
