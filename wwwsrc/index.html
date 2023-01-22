@@ -6,7 +6,7 @@
     <title>AutoWFLib Project | Automated Web Font Library</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        @import url('/full.css');
+        @import url('./full.css');
         * {
             text-rendering: optimizeLegibility;
             box-sizing: border-box;
@@ -61,7 +61,7 @@
                     font-size: 0rem;
                 }
 
-                @media screen and (min-width: 901px) {
+                @media screen and (min-width: 800px) {
                     .fontslist-item-fontInfoCard {
                         float: left;
                         width: 50%;
@@ -153,13 +153,13 @@
 
     <script>
         (function () {
-            window.app_3639cc171fa746bdbf162d44666c3fa8 = {
+            const app = {
                 ram: {
                     fontIdList: [],
                     fontDataMap: {}
                 }
             };
-            const app = window.app_3639cc171fa746bdbf162d44666c3fa8;
+            window.app_3639cc171fa746bdbf162d44666c3fa8 = app;
 
 
 
@@ -175,7 +175,7 @@
                     >
                         <div class="fontInfoCard--inner">
                             <div class="fontInfoCard--toparea">
-                                <span class="fontInfoCard--family" style="font-family: '${data.family}', sans-serif;">${data.family}</span>
+                                <span class="fontInfoCard--family" style="font-family: '${data.family}', 'Comic Neue', sans-serif;">${data.family}</span>
                                 <span class="fontInfoCard--variants">${data.list.length} variants</span>
                             </div>
                                 <div class="fontInfoCard--midarea">
