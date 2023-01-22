@@ -10,6 +10,10 @@ Website: [https://autowflib.pages.dev/](https://autowflib.pages.dev/).
 The website shows the complete list of collected fonts and supports searching by font name.
 
 
+
+
+
+
 ## Contributing
 
 ### Font Inclusion
@@ -35,6 +39,10 @@ Steps for making a good pull request:
 - Make sure that the command above produces expected WOFF2 files and CSS files in `/distdir/fonts/sans-humanist/my-first-font`.
 - Commit, push, and create a pull request.
 - Include the generated log file `buildlog.txt` in the pull request as an attachment.
+
+
+
+
 
 
 ## Copyright
