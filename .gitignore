@@ -5,9 +5,11 @@
 /distdir
 /cdndist
 /pkgdist
+/buildlog.txt
 
 /wwwextra
 /wwwdist
 
 /_dist
 /.testdir
+

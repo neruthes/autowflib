@@ -140,6 +140,10 @@
                     Copyright &copy; 2023 Neruthes, and other contributors.
                 </p>
                 <p>
+                    The collected fonts may be copyrighted by their respective creators.<br>
+                    See GitHub repository README for more info on copyright and license.
+                </p>
+                <p>
                     <a href="https://github.com/neruthes/autowflib">GitHub</a>
                 </p>
             </footer>
@@ -204,16 +208,6 @@
                     });
                     return 0;
                 } else {
-                    // document.querySelectorAll('.fontslist-item-fontInfoCard').forEach(function (card) {
-                    //     if (card.dataset.searchTerm.indexOf(val) >= 0) {
-                    //         console.log('card.dataset.searchTerm');
-                    //         console.log(card.dataset.searchTerm);
-                    //         console.log(card);
-                    //         card.dataset.shown = 'true';
-                    //     } else {
-                    //         card.dataset.shown = 'false';
-                    //     };
-                    // });
                     app.ram.fontIdList.forEach(function (id) {
                         if (app.ram.fontDataMap[id].searchTerm.indexOf(val) >= 0) {
                             document.querySelector(`.fontslist-item-fontInfoCard[data-font-id=${id}]`).dataset.shown = true;
