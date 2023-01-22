@@ -3,6 +3,9 @@
 This article describes how a font is defined in this repository.
 
 
+
+
+
 ## Path
 
 A font must have a major category and a minor category, which are reflected in the path.
@@ -84,15 +87,32 @@ Available major categories:
 | emoji   | Emoji         |
 | misc    | Miscellaneous |
 
-Available minor categories:
-| Name  | Meaning                   |
-| ----- | ------------------------- |
-| human | Humanist                  |
-| grot  | Grotesque & Neo-grotesque |
-| trans | Transitional              |
-| type  | Typewriter                |
-| code  | For showing source code   |
-| other | Can hardly be categorized |
+Available global minor categories:
+| Name  | Meaning                   | Example          |
+| ----- | ------------------------- | ---------------- |
+| cjk   | Designed for CJK          | Noto Sans CJK SC |
+| human | Humanist                  | Frutiger         |
+| geo   | Geometric                 | Avenir           |
+| trans | Transitional              | Georgia          |
+| old   | Old-style                 | EB Garamond      |
+| type  | Typewriter                | Courier          |
+| other | Can hardly be categorized | -                |
+
+Available local minor categories by allowed range:
+- sans
+  - `did`: Didone. E.g. Didot.
+- sans
+  - `grot`: Grotesque and neo-grotesque. E.g. Helvetica.
+- mono
+  - `code`: Fonts used for software code editors and modern terminal emulators. E.g. JetBrains Mono.
+- display
+  - `gothic`: Grotesque and neo-grotesque. E.g. Bertholdr Mainzer Fraktur.
+  - `magic`: Related feelings of magic. E.g. IM FELL English, Papyrus.
+- calli
+  - `hand`: Handwritten style.
+  - `cursive`: Classical cursive style.
+- misc
+  - `deco`: Not letters, but symbols. E.g. Webdings, FontAwesome.
 
 
 

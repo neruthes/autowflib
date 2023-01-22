@@ -35,13 +35,19 @@
             margin: 30px auto;
         }
 
+        .big-part footer {
+            font-size: 0.75rem;
+            text-align: center;
+            opacity: 0.7;
+        }
+
     </style>
 </head>
 
 <body>
     <div class="grand-container">
 
-        <div class="big-part">
+        <div class="big-part" style="min-height: 600px;">
             <header>
                 <h1>AutoWFLib</h1>
                 <p>Automated Web Font Library</p>
@@ -128,6 +134,12 @@
 
         <div class="big-part">
             <footer>
+                <p>
+                    Copyright &copy; 2023 Neruthes, and other contributors.
+                </p>
+                <p>
+                    <a href="https://github.com/neruthes/autowflib">GitHub</a>
+                </p>
             </footer>
         </div>
 
@@ -166,7 +178,7 @@
                             <div class="fontInfoCard--subarea">
                                 <a target="_blank" href="https://autowflibcdn.pages.dev/awfl-cdn/css/${data.id}.css">CSS Link</a>
                                 &nbsp;&nbsp;&nbsp;
-                                <a target="_blank" href="/preview/?id=${data.id}&family=${encodeURIComponent(data.family)}">Preview</a>
+                                <a target="_blank" href="./preview/?id=${data.id}&family=${encodeURIComponent(data.family)}">Preview</a>
                             </div>
                         </div>
                     </div>`;
@@ -184,21 +196,28 @@
                     return 0;
                 };
                 box.dataset.dirty = 'false';
-                if (val.length < 2) {
+                if (val.trim().length === 0) {
                     document.querySelectorAll('.fontslist-item-fontInfoCard').forEach(function (card) {
                         card.dataset.shown = 'true';
                     });
                     return 0;
                 } else {
-                    document.querySelectorAll('.fontslist-item-fontInfoCard').forEach(function (card) {
-                        if (card.dataset.searchTerm.indexOf(val) >= 0) {
-                            console.log('card.dataset.searchTerm');
-                            console.log(card.dataset.searchTerm);
-                            console.log(card);
-                            card.dataset.shown = 'true';
+                    // document.querySelectorAll('.fontslist-item-fontInfoCard').forEach(function (card) {
+                    //     if (card.dataset.searchTerm.indexOf(val) >= 0) {
+                    //         console.log('card.dataset.searchTerm');
+                    //         console.log(card.dataset.searchTerm);
+                    //         console.log(card);
+                    //         card.dataset.shown = 'true';
+                    //     } else {
+                    //         card.dataset.shown = 'false';
+                    //     };
+                    // });
+                    app.ram.fontIdList.forEach(function (id) {
+                        if (app.ram.fontDataMap[id].searchTerm.indexOf(val) >= 0) {
+                            document.querySelector(`.fontslist-item-fontInfoCard[data-font-id=${id}]`).dataset.shown = true;
                         } else {
-                            card.dataset.shown = 'false';
-                        };
+                            document.querySelector(`.fontslist-item-fontInfoCard[data-font-id=${id}]`).dataset.shown = false;
+                        }
                     });
                 };
                 if (document.querySelector('.fontslist-area-list').offsetHeight < 10) {
@@ -225,7 +244,7 @@
                         app.ram._currentParsingId = id;
                         app.ram.fontIdList.push(id);
                         app.ram.fontDataMap[id] = {
-                            id, family, category
+                            id, family, category, searchTerm: `${id} ${family.toLowerCase()}`
                         };
                     };
                     if (dataline.startsWith('@list|')) {

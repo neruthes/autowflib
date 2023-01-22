@@ -70,6 +70,7 @@ case $1 in
         cat cdndist/awfl-cdn/css/*.css > wwwsrc/full.css
         rsync -av --delete wwwsrc/ wwwdist/
         rsync -av wwwextra/ wwwdist/
+        du -xhd2 wwwdist
         ;;
     pkgdist | pkgdist/)
         cd $REPODIR/cdndist && tar --xz -cf $REPODIR/pkgdist/cdn-mirror.tar.xz awfl-cdn
