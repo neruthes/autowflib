@@ -6,7 +6,6 @@
     <title>AutoWFLib Project | Automated Web Font Library</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        @import url('./full.css');
         * {
             text-rendering: optimizeLegibility;
             box-sizing: border-box;
@@ -91,8 +90,9 @@
                 }
 
                 .fontInfoCard--toparea {
-                    height: 1.7rem;
+                    height: 0.9rem;
                 }
+
                 .fontInfoCard--midarea {
                     padding: 8px 0;
                 }
@@ -102,7 +102,8 @@
                 }
 
                 .fontInfoCard--family {
-                    font-size: 1.1rem;
+                    font-size: 0.8rem;
+                    opacity: 0;
                 }
 
                 .fontInfoCard--variants {
@@ -174,8 +175,13 @@
                         data-font-category="${data.category}" data-variants-count=${data.list.length}
                     >
                         <div class="fontInfoCard--inner">
-                            <div class="fontInfoCard--toparea">
-                                <span class="fontInfoCard--family" style="font-family: '${data.family}', 'Comic Neue', sans-serif;">${data.family}</span>
+                            <div style="
+                                    background: url('./fontname-thumbnail/${data.id[0]}/${data.id}.png') left center no-repeat scroll;
+                                    background-size: auto 80%;
+                                "
+                                class="fontInfoCard--toparea"
+                            >
+                                <span class="fontInfoCard--family">${data.family}</span>
                                 <span class="fontInfoCard--variants">${data.list.length} variants</span>
                             </div>
                                 <div class="fontInfoCard--midarea">

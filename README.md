@@ -1,7 +1,5 @@
 # Automated Web Font Library
 
-An addition to Google Fonts.
-
 Some fonts are not available on Google Fonts, and the submission-approval process can destroy patience.
 Perhaps this place is an alternative home.
 
@@ -30,6 +28,8 @@ The font being submitted for inclusion in this repository must satisfy the follo
   - The font is not available on Google Fonts.
 
 ### Pull Requests
+
+Our workflow is similar to GNU/Linux distro software packaging.
 
 Suppose that you are going to submit a font "My First Font" under category "sans-humanist".
 

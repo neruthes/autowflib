@@ -212,18 +212,16 @@ function artifacts_install() {
 
     ### Clean old files in distdir
     find "$distdir" -mindepth 1 -delete
-    ### Write into distdir
-    rsync -av --delete --mkpath "$workdir/output/" "$distdir/"
 
-    ### Work with cdndist
-    mkdir -pv cdndist/awfl-cdn/css
-    rsync -av --delete --mkpath "$distdir/" "cdndist/awfl-cdn/$TARGET_ID/"
-    cat "$workdir/output/$id.css" > "cdndist/awfl-cdn/css/$id.css"
+    ### Write into distdir
+    mkdir -pv distdir/css
+    cat "$workdir/output/$id.css" > "distdir/css/$id.css"
+    rsync -av --delete --mkpath "$workdir/output/" "$distdir/"
 }
 
 function workdir_cleanup() {
     [[ $NO_CLEANUP == y ]] && return 0
-    find "$workdir" -delete
+    rm -rv "$workdir"
 }
 
 
@@ -274,6 +272,7 @@ if [[ $2 == full ]]; then
         log INFO "[fbuild.sh]  Entering phase '$phase_name'"
         $phase_name
     done
+    log INFO "[fbuild.sh]  My job is done. Good bye."
 else
     $2
 fi

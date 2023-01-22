@@ -1,6 +1,6 @@
-@family|math-elite|Math Elite|mono-type
-@list|EliteMath-New.woff2|EliteMath-Wide.woff2
 @family|c059|C059|serif-trans
 @list|C059-BdIta.woff2|C059-Bold.woff2|C059-Italic.woff2|C059-Roman.woff2
+@family|elite-math|Elite Math|mono-type
+@list|EliteMath-New.woff2|EliteMath-Wide.woff2
 @family|libertinus-serif|Libertinus Serif|serif-trans
 @list|LibertinusSerif-Bold.woff2|LibertinusSerif-BoldItalic.woff2|LibertinusSerif-Italic.woff2|LibertinusSerif-Regular.woff2|LibertinusSerif-Semibold.woff2|LibertinusSerif-SemiboldItalic.woff2

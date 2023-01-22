@@ -33,11 +33,26 @@ case $1 in
             id="$(basename $1)"
             TARGET_ID="$(dirname $1)/$id"
             (bash src/fbuild.sh $TARGET_ID full || exit 1) | tee buildlog.txt
-            echo "-----------------------------------"
-            echo "Run this command to upload:"
-            echo "$ " bash $0 "cdndist/awfl-cdn/css/$id.css" "cdndist/awfl-cdn/$TARGET_ID/*"
-            echo "-----------------------------------"
+            # echo "-----------------------------------"
+            # echo "Run this command to upload:"
+            # echo "$ " bash $0 "cdndist/awfl-cdn/css/$id.css" "cdndist/awfl-cdn/$TARGET_ID/*"
+            # echo "-----------------------------------"
+            id="$id" bash $0 thumbnail
         fi
+        ;;
+    thumbnail)
+        echo "[INFO] Generating thumbnail for '$id'..."
+        source "$(find fonts -mindepth 2 -maxdepth 2 -name "$id" | head -n1)/info"
+        mkdir -p $REPODIR/.testdir/thumbnail.$id
+        cd $REPODIR/.testdir/thumbnail.$id
+        fileID="$(grep "^400:" <<< "$weight_map" | cut -d: -f2)"
+        cp -a $REPODIR/distdir/fonts/$cat/$id/$fileID.woff2 ./$fileID.woff2
+        woff2_decompress $fileID.woff2
+        convert -size 3000x1500 xc:white -font "@$fileID.ttf" -pointsize 100 -fill black -annotate +100+100 "$family" -trim -bordercolor "#FFF" -border 5 +repage -resize x80 $REPODIR/.testdir/thumbnail.$id/$id.png
+        cd $REPODIR
+        mkdir -p wwwsrc/fontname-thumbnail/${id:0:1}
+        cp .testdir/thumbnail.$id/$id.png wwwsrc/fontname-thumbnail/${id:0:1}/$id.png
+        rm -r .testdir/thumbnail.$id
         ;;
     tag)
         echo "$ git tag snapshot-$(TZ=UTC date +%Y%m%d)"
@@ -50,6 +65,7 @@ case $1 in
         done
         ;;
     cdn)
+        rsync -av --mkpath distdir/ cdndist/awfl-cdn/
         wrangler pages publish cdndist --project-name=autowflibcdn --commit-dirty=true --branch=main
         ;;
     cf)
@@ -62,8 +78,7 @@ case $1 in
         ### Target: font-family-datamap
         outfn="wwwsrc/font-family-datamap.txt"
         printf '' > $outfn
-        distdir_families="$(ls distdir/fonts/*/*/*.css | cut -d/ -f4)"
-        echo "distdir_families=$distdir_families"
+        distdir_families="$(ls distdir/fonts/*/*/*.css | cut -d/ -f4 | sort)"
         for id in $distdir_families; do
             cat="$(find fonts -type d -name $id | cut -d/ -f2)"
             echo "@family|$id|$(grep '^family=' fonts/$cat/$id/info | cut -d= -f2 | tr -d \'\")|$cat" >> $outfn
