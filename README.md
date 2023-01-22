@@ -49,6 +49,19 @@ Steps for making a good pull request:
 
 
 
+## Miscellaneous Notes
+
+The all-in-one complete CSS for all fonts in this library:
+[https://autowflib.pages.dev/full.css](https://autowflib.pages.dev/full.css).
+Since modern browsers are clever enough to procrastinate the loading of
+WOFF files not yet required in the webpage,
+using this may perhaps make no real harm...
+
+
+
+
+
+
 ## Copyright
 
 ### The AutoWFLib Project

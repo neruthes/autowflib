@@ -190,6 +190,7 @@ function css_generate() {
                 font-family: '$family';
                 font-weight: $(grep ":$woffid$" <<< "$weight_map" | cut -c1-3);
                 font-style: $this_woff_font_style;
+                font-display: swap;
                 src: $(gen_src_list "$woffid" | cut -c3-);
             }
             " >> "$csspath"

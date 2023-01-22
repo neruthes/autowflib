@@ -48,7 +48,7 @@ case $1 in
         fileID="$(grep "^400:" <<< "$weight_map" | cut -d: -f2)"
         cp -a $REPODIR/distdir/fonts/$cat/$id/$fileID.woff2 ./$fileID.woff2
         woff2_decompress $fileID.woff2
-        convert -size 3000x1500 xc:white -font "@$fileID.ttf" -pointsize 100 -fill black -annotate +100+100 "$family" -trim -bordercolor "#FFF" -border 5 +repage -resize x80 $REPODIR/.testdir/thumbnail.$id/$id.png
+        convert -size 3000x1500 xc:white -font "@$fileID.ttf" -pointsize 100 -fill black -annotate +100+100 "$family" -trim -bordercolor "#FFF" +repage -resize x80 $REPODIR/.testdir/thumbnail.$id/$id.png
         cd $REPODIR
         mkdir -p wwwsrc/fontname-thumbnail/${id:0:1}
         cp .testdir/thumbnail.$id/$id.png wwwsrc/fontname-thumbnail/${id:0:1}/$id.png
@@ -135,7 +135,7 @@ case $1 in
         echo "create table FnTimeMap(fn TEXT PRIMARY KEY, time INT)" | sqlite3 wwwextra/r2uploadtime.db
         ;;
     '')
-        bash $0 wwwdist pkgdist pkgdist/wwwdist.tar cf
+        bash $0 wwwdist pkgdist cdn cf
         cfoss pkgdist/wwwdist.tar
         bash $0 cf
         git add .
