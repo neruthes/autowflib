@@ -42,6 +42,16 @@ function db_insert() {
 
 
 case $1 in
+    tag)
+        echo "$ git tag snapshot-$(TZ=UTC date +%Y%m%d)"
+        echo "$ git push origin snapshot-$(TZ=UTC date +%Y%m%d)"
+        echo "url:      https://github.com/neruthes/autowflib/releases/new"
+        echo "msg:      This snapshot contains $(find cdndist/awfl-cdn/fonts -name '*.css' | wc -l) font definitions and $(find cdndist/awfl-cdn/fonts -name '*.woff2' | wc -l) WOFF artifacts."
+        echo "files:"
+        for i in pkgdist/*; do
+            realpath $i
+        done
+        ;;
     cdn)
         wrangler pages publish cdndist --project-name=autowflibcdn --commit-dirty=true --branch=main
         ;;
@@ -74,8 +84,9 @@ case $1 in
         ;;
     pkgdist | pkgdist/)
         cd $REPODIR/cdndist && tar --xz -cf $REPODIR/pkgdist/cdn-mirror.tar.xz awfl-cdn
+        cd $REPODIR
         tar --xz -cf $REPODIR/pkgdist/definitions.tar.xz $REPODIR/fonts
-        tar --xz -cf $REPODIR/pkgdist/definitions.tar.xz $REPODIR/fonts
+        cd $REPODIR/.testdir && tar -pxvf $REPODIR/pkgdist/cdn-mirror.tar.xz
         du -xh $REPODIR/pkgdist/*
         ;;
     pkgdist/*.*)
