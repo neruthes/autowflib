@@ -1,0 +1,17 @@
+id="math-elite"
+family="Math Elite"
+cat="mono-type"
+about="A typewriter font drawn from Dennis Ritchie's thesis."
+infopage="https://fontesk.com/elite-math-font/"
+license="OFL"
+
+download="https://fontesk.com/download/87154/"
+format="zip"
+sha256="506d5605cd675d7d56d021ec8f2597000884a20a17dd9b0282db38e9bf9aeac3"
+
+convert_from="ttf"
+
+weight_map="
+400:EliteMath-New
+600:EliteMath-Wide
+"

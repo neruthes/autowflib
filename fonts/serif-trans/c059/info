@@ -2,13 +2,12 @@ id="c059"
 family="C059"
 cat="serif-trans"
 about="URW New Century Schoolbook"
+infopage="https://fontesk.com/century-schoolbook-typeface/"
 license="OFL"
 
 download="https://fontesk.com/download/39316/"
 format="zip"
 sha256="99f2595b3093f82faf9f054947544d2839a769ef8c8c926883e4e5e8c5fd4b76"
-
-infopage="https://fontesk.com/century-schoolbook-typeface/"
 
 convert_from="otf"
 

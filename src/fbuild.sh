@@ -121,17 +121,25 @@ function src_extract() {
 
 function src_build() {
     tree "$workdir"
-    if [[ "$convert_from" == skip ]]; then
-        log INFO "This font does not require any conversion."
-        return 0
-    fi
-
     ### Preprocess file naming
     case $convert_from in
-        otf)
-            for fn in $(find "$workdir/build" -name "*.otf") $(find "$workdir/build" -name "*.OTF"); do
-                mv -v "$fn" "$workdir/build/$(otfinfo -p "$fn").otf"
+        skip)
+            log INFO "This font does not require any conversion."
+        return 0
+            ;;
+        # otf)
+        #     for fn in $(find "$workdir/build" -name "*.otf") $(find "$workdir/build" -name "*.OTF"); do
+        #         mv -v "$fn" "$workdir/build/$(otfinfo -p "$fn").otf"
+        #     done
+        #     ;;
+        otf|ttf)
+            IFS=$'\n'
+            for fn in $(find "$workdir/build" -name "*.$convert_from") $(find "$workdir/build" -name "*.${convert_from^^}"); do
+                mv -v "$fn" "$workdir/build/$(fc-scan "$fn" | grep postscriptname | cut -d'"' -f2).$convert_from"
             done
+            ;;
+        *)
+            log INFO "Sorry, we cannot process this data format for now."
             ;;
     esac
 

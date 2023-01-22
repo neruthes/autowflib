@@ -55,7 +55,7 @@ case $1 in
         ### Target: font-family-datamap
         outfn="wwwsrc/font-family-datamap.txt"
         printf '' > $outfn
-        distdir_families="$(ls distdir/fonts/*-*/)"
+        distdir_families="$(ls distdir/fonts/*/*/*.css | cut -d/ -f4)"
         echo "distdir_families=$distdir_families"
         for id in $distdir_families; do
             cat="$(find fonts -type d -name $id | cut -d/ -f2)"
