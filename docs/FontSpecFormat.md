@@ -80,17 +80,19 @@ Available major categories:
 | sans    | Sans-serif    |
 | mono    | Monospace     |
 | display | Display       |
+| calli   | Calligraphy   |
 | emoji   | Emoji         |
 | misc    | Miscellaneous |
 
 Available minor categories:
 | Name  | Meaning                   |
 | ----- | ------------------------- |
-| trans | Transitional              |
-| grot  | Grotesque & Neo-grotesque |
 | human | Humanist                  |
+| grot  | Grotesque & Neo-grotesque |
+| trans | Transitional              |
 | type  | Typewriter                |
 | code  | For showing source code   |
+| other | Can hardly be categorized |
 
 
 

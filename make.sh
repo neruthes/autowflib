@@ -11,9 +11,13 @@ if [[ -e $1/info ]]; then
     id="$(basename $1)"
     TARGET_ID="$(dirname $1)/$id"
     bash src/fbuild.sh $TARGET_ID full
-    "TARGET_ID=$TARGET_ID"
-    bash $0 cdndist/awfl-cdn/css/$id.css
-    bash $0 cdndist/awfl-cdn/$TARGET_ID/*
+    echo "-----------------------------------"
+    echo "Run this command to upload:"
+    echo "$ " bash $0 cdndist/awfl-cdn/css/$id.css cdndist/awfl-cdn/$TARGET_ID/*
+    echo "-----------------------------------"
+    if [[ $IMPLICIT_UPLOADING == y ]]; then
+        bash $0 cdndist/awfl-cdn/css/$id.css cdndist/awfl-cdn/$TARGET_ID/*
+    fi
     exit 0
 fi
 
@@ -75,12 +79,13 @@ case $1 in
         ;;
     pkgdist/*.*)
         wrangler r2 object put "autowflibcdn/$1" --file $1
-        if [[ $USER == neruthes ]]; then
+        if [[ $IMPLICIT_UPLOADING == y ]]; then
             cfoss $1
             minoss $1
         fi
         ;;
     cdndist/awfl-cdn/*.woff2 | cdndist/awfl-cdn/*.css)
+        ### Smartly upload
         last_push_time="$(db_find "$1")"
         file_change_time="$(date -r "$1" +%s)"
         if [[ "$last_push_time" -gt "$file_change_time" ]] && [[ "$FORCE_UPLOAD" != y ]]; then
@@ -100,5 +105,8 @@ case $1 in
     initdb)
         rm wwwextra/r2uploadtime.db
         echo "create table FnTimeMap(fn TEXT PRIMARY KEY, time INT)" | sqlite3 wwwextra/r2uploadtime.db
+        ;;
+    *)
+        echo "[ERROR] No rule to make '$1'. Stop."
         ;;
 esac
