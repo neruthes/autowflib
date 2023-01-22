@@ -135,7 +135,7 @@ case $1 in
         echo "create table FnTimeMap(fn TEXT PRIMARY KEY, time INT)" | sqlite3 wwwextra/r2uploadtime.db
         ;;
     '')
-        bash $0 wwwdist pkgdist cf
+        bash $0 wwwdist pkgdist pkgdist/wwwdist.tar cf
         git add .
         git commit -m "Automatic deploy command: $(TZ=UTC date -Is | cut -c1-19 | sed 's/T/ /')"
         git push
