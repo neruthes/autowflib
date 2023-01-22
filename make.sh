@@ -88,6 +88,9 @@ case $1 in
         tar --xz -cf $REPODIR/pkgdist/definitions.tar.xz $REPODIR/fonts
         cd $REPODIR/.testdir && tar -pxvf $REPODIR/pkgdist/cdn-mirror.tar.xz
         du -xh $REPODIR/pkgdist/*
+        cd $REPODIR
+        [[ -e pkgdist/cdn-mirror.sqfs ]] && rm pkgdist/cdn-mirror.sqfs
+        mksquashfs cdndist pkgdist/cdn-mirror.sqfs -comp zstd -b 1M -one-file-system -Xcompression-level 22 -noappend
         ;;
     pkgdist/*.*)
         wrangler r2 object put "autowflibcdn/$1" --file $1
