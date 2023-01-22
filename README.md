@@ -34,6 +34,7 @@ The font being submitted for inclusion in this repository must satisfy the follo
 Suppose that you are going to submit a font "My First Font" under category "sans-humanist".
 
 Steps for making a good pull request:
+
 - Fork this repo.
 - Clone to your machine.
 - Create the `/fonts/sans-humanist/my-first-font/info` file according to [FontSpecFormat.md](docs/FontSpecFormat.md). (Also refer to the definitions of other fonts.)
@@ -43,7 +44,7 @@ Steps for making a good pull request:
 - Commit, push, and create a pull request.
 - Include the generated log file `buildlog.txt` in the pull request as an attachment.
 
-
+Alternatively, the `/addfont.sh` interactive script can make the creation of the `info` file more friendly.
 
 
 
