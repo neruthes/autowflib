@@ -1,0 +1,18 @@
+id="x-typewriter"
+family="X Typewriter"
+cat="mono-type"
+about="Real typewriter feeling with warm and natural tone, perfect for vintage projects."
+infopage="https://ggbot.itch.io/x-typewriter-font"
+license="OFL"
+
+download="https://fontesk.com/download/64322/"
+format="zip"
+sha256="b02b224d852f015850ae0909c1ce19b2bb0a2797851230be1f9e3cd535e01d71"
+
+convert_from="otf"
+
+weight_map="
+400:XTypewriter
+600:XTypewriter-Bold
+"
+

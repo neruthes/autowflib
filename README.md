@@ -57,6 +57,10 @@ Since modern browsers are clever enough to procrastinate the loading of
 WOFF files not yet required in the webpage,
 using this may perhaps make no real harm...
 
+You can use this piece of code for having a quick preview for the fonts on an existing webpage (if it has no insane CSP):
+```js
+(function (s){s.innerHTML=`@import url('https://autowflib.pages.dev/full.css')`;document.head.append(s)})(document.createElement('style'))
+```
 
 
 

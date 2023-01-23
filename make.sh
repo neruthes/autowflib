@@ -55,10 +55,10 @@ case $1 in
         rm -r .testdir/thumbnail.$id
         ;;
     tag)
-        echo "$ git tag snapshot-$(TZ=UTC date +%Y%m%d)"
-        echo "$ git push origin snapshot-$(TZ=UTC date +%Y%m%d)"
+        tagname="snapshot-$(TZ=UTC date +%Y%m%d)"
+        echo "$ git tag $tagname && git push origin $tagname"
         echo "url:      https://github.com/neruthes/autowflib/releases/new"
-        echo "msg:      This snapshot contains $(find cdndist/awfl-cdn/fonts -name '*.css' | wc -l) font definitions and $(find cdndist/awfl-cdn/fonts -name '*.woff2' | wc -l) WOFF artifacts."
+        echo "msg:      This snapshot contains $(find cdndist/awfl-cdn/fonts -name '*.css' | wc -l) font families and $(find cdndist/awfl-cdn/fonts -name '*.woff2' | wc -l) WOFF2 artifacts."
         echo "files:"
         for i in pkgdist/*; do
             realpath $i

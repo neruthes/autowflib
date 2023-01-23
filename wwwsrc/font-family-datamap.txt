@@ -6,3 +6,5 @@
 @list|LibertinusSerif-Bold.woff2|LibertinusSerif-BoldItalic.woff2|LibertinusSerif-Italic.woff2|LibertinusSerif-Regular.woff2|LibertinusSerif-Semibold.woff2|LibertinusSerif-SemiboldItalic.woff2
 @family|smiley-sans|Smiley Sans|sans-cjk
 @list|SmileySans-Oblique.woff2
+@family|x-typewriter|X Typewriter|mono-type
+@list|XTypewriter-Bold.woff2|XTypewriter.woff2
