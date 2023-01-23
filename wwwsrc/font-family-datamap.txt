@@ -6,6 +6,8 @@
 @list|LibertinusSerif-Bold.woff2|LibertinusSerif-BoldItalic.woff2|LibertinusSerif-Italic.woff2|LibertinusSerif-Regular.woff2|LibertinusSerif-Semibold.woff2|LibertinusSerif-SemiboldItalic.woff2
 @family|lucette|Lucette|serif-trans
 @list|Lucette-Regular.woff2|Lucette-Regularitalic.woff2
+@family|nacelle|Nacelle|sans-grot
+@list|Nacelle-Black.woff2|Nacelle-BlackItalic.woff2|Nacelle-Bold.woff2|Nacelle-BoldItalic.woff2|Nacelle-Heavy.woff2|Nacelle-HeavyItalic.woff2|Nacelle-Italic.woff2|Nacelle-Light.woff2|Nacelle-LightItalic.woff2|Nacelle-Regular.woff2|Nacelle-SemiBold.woff2|Nacelle-SemiBoldItalic.woff2|Nacelle-Thin.woff2|Nacelle-ThinItalic.woff2|Nacelle-UltraLight.woff2|Nacelle-UltraLightItalic.woff2
 @family|new-heterodox-mono|New Heterodox Mono|mono-serif
 @list|NewHeterodoxMono-Bold.woff2|NewHeterodoxMono-Book.woff2
 @family|smiley-sans|Smiley Sans|sans-cjk

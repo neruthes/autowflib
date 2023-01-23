@@ -268,7 +268,7 @@
                         app.ram._currentParsingId = id;
                         app.ram.fontIdList.push(id);
                         app.ram.fontDataMap[id] = {
-                            id, family, category, searchTerm: `${id} ${family.toLowerCase()}`
+                            id, family, category, searchTerm: `${category} ${id} ${family.toLowerCase()}`
                         };
                     };
                     if (dataline.startsWith('@list|')) {
