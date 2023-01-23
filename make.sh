@@ -7,7 +7,7 @@ REPODIR="$PWD"
 
 
 
-if [[ -e $2 ]]; then
+if [[ ! -z "$2" ]]; then
     for i in "$@"; do
         bash "$0" "$i"
     done
