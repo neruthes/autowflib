@@ -116,6 +116,8 @@ format=\"$f_format\"
 sha256=\"$f_sha256\"
 
 convert_from=\"$f_convert_from\"
+
+weight_map=\"\"
 "
 echo "$output_file_content"
 echo "-----------------------------------------------"
@@ -128,7 +130,7 @@ if [[ $USER_LAST_INPUT == y* ]]; then
     file_path="$file_dir_path/info"
     echo "$output_file_content" > "$file_path"
     say "Your file is written into '$file_path'.\n"
-    say "Next, you may run './make.sh $file_path' to build for the font."
+    say "Next, you may run './make.sh $file_dir_path' to build for the font."
 fi
 exit 0
 

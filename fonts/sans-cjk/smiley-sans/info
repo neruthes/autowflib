@@ -1,0 +1,14 @@
+id="smiley-sans"
+family="Smiley Sans"
+cat="sans-cjk"
+about="Smiley Sans is a condensed and oblique Chinese typeface seeking a visual balance between the humanist and the geometric."
+infopage="https://github.com/atelier-anchor/smiley-sans"
+license="OFL"
+
+download="https://github.com/atelier-anchor/smiley-sans/releases/download/v1.1.1/smiley-sans-v1.1.1.zip"
+format="zip"
+sha256="17c30d067b90ef6fb259caaf66e4339e30d70d5f197485da8f305c040d41413f"
+
+convert_from="otf"
+
+weight_map="400:SmileySans-Oblique"

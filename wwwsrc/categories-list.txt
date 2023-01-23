@@ -1,2 +1,3 @@
 mono-type
+sans-cjk
 serif-trans
