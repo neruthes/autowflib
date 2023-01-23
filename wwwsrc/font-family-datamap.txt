@@ -1,3 +1,5 @@
+@family|brygada-1918|Brygada 1918|serif-x
+@list|Brygada1918-Bold.woff2|Brygada1918-BoldItalic.woff2|Brygada1918-Italic.woff2|Brygada1918-Medium.woff2|Brygada1918-MediumItalic.woff2|Brygada1918-Regular.woff2|Brygada1918-SemiBold.woff2|Brygada1918-SemiBoldItalic.woff2
 @family|c059|C059|serif-trans
 @list|C059-BdIta.woff2|C059-Bold.woff2|C059-Italic.woff2|C059-Roman.woff2
 @family|elite-math|Elite Math|mono-type
@@ -12,5 +14,7 @@
 @list|NewHeterodoxMono-Bold.woff2|NewHeterodoxMono-Book.woff2
 @family|smiley-sans|Smiley Sans|sans-cjk
 @list|SmileySans-Oblique.woff2
+@family|urw-bookman|URW Bookman|serif-trans
+@list|URWBookman-Demi.woff2|URWBookman-DemiItalic.woff2|URWBookman-Light.woff2|URWBookman-LightItalic.woff2
 @family|x-typewriter|X Typewriter|mono-type
 @list|XTypewriter-Bold.woff2|XTypewriter.woff2

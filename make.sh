@@ -93,9 +93,9 @@ case $1 in
         rsync -av --delete wwwsrc/ wwwdist/
         rsync -av wwwextra/ wwwdist/
         du -xhd2 wwwdist
-        bash $0 pkgdist
         if [[ $USER == neruthes ]]; then
-            cfoss pkgdist/wwwdist.tar
+            echo "[INFO] Remember to upload the tarball before pushing to GitHub master:"
+            echo "    $  bash $0 pkgdist && cfoss pkgdist/wwwdist.tar"
         fi
         ;;
     pkgdist | pkgdist/)

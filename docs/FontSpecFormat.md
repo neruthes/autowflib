@@ -90,6 +90,7 @@ Available major categories:
 Available global minor categories:
 | Name  | Meaning                   | Example          |
 | ----- | ------------------------- | ---------------- |
+| x     | To be decided later       | -                |
 | cjk   | Designed for CJK          | Noto Sans CJK SC |
 | human | Humanist                  | Frutiger         |
 | geo   | Geometric                 | Avenir           |

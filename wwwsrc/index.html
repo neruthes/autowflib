@@ -19,6 +19,7 @@
     <meta name="twitter:description" content="AutoWFLib Project | Automated Web Font Library">
     <meta name="twitter:image" content="./favicon.png">
 
+    <link rel="stylesheet" href="https://autowflibcdn.pages.dev/awfl-cdn/css/brygada-1918.css">
     <link rel="stylesheet" href="https://autowflibcdn.pages.dev/awfl-cdn/css/c059.css">
     <link rel="stylesheet" href="https://autowflibcdn.pages.dev/awfl-cdn/css/nacelle.css">
 
@@ -33,7 +34,7 @@
         html,
         body {
             /* font-family: -apple-system, 'SF Pro Text', BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
-            font-family: 'C059', serif;
+            /* font-family: 'Brygada 1918', serif; */
             font-size: 5mm;
             padding: 0rem;
             margin: 0rem;
@@ -52,26 +53,49 @@
             margin: 2rem auto;
         }
 
+        h1 {
+            font-weight: 400;
+            font-variant-caps: small-caps;
+        }
+
         .big-part footer {
-            font-size: 0.75rem;
+            font-size: 0.65rem;
             text-align: center;
             opacity: 0.7;
+        }
+
+    </style>
+    <style>
+        /* Utilities */
+        .inline-block {
+            display: inline-block;
+        }
+
+        .serif {
+            font-family: 'Brygada 1918', serif;
+        }
+
+        .sans {
+            font-family: 'Nacelle', sans-serif;
         }
 
     </style>
 </head>
 
 <body>
-    <div class="grand-container">
+    <div class="grand-container serif">
 
         <div class="big-part" style="min-height: 700px;">
             <header>
                 <h1>AutoWFLib</h1>
-                <p style="font-size: 0.85rem;">Automated Web Font Library, a collaborative park for open-source fonts.</p>
+                <p style="font-size: 0.85rem;">
+                    Automated Web Font Library.
+                    Collaborative park for open-source fonts.
+                    An addition to mainstream web font hosting services.
+                </p>
             </header>
             <div class="top-nav">
             </div>
-            <div style="height: 1px; background: #BBB; margin: 0 0 1rem;"></div>
 
             <style>
                 .fontslist-area-list {
@@ -85,11 +109,11 @@
                         width: 50%;
                     }
 
-                    .fontslist-item-fontInfoCard[data-shown="true"]:nth-child(2n+0) {
+                    .fontslist-item-fontInfoCard[data-shown="true"][data-evenodd="0"] {
                         padding-left: 0.6rem;
                     }
 
-                    .fontslist-item-fontInfoCard[data-shown="true"]:nth-child(2n+1) {
+                    .fontslist-item-fontInfoCard[data-shown="true"][data-evenodd="1"] {
                         padding-right: 0.6rem;
                     }
                 }
@@ -131,11 +155,8 @@
                     float: right;
                 }
 
-                .fontInfoCard--category {
-                }
-
             </style>
-            <div class="search-area">
+            <div class="search-area sans" style="margin: 1.2rem 0;">
                 <input id="js-mainSearchBox" type="text" placeholder="Search font name" style="
                     font-size: 0.8rem;
                     border: 1px solid #AAA;
@@ -143,12 +164,20 @@
                     display: block;
                     width: 100%;
                     padding: 0.5rem;
-                    margin: 0 0 3rem;
                 ">
             </div>
-            <div class="fontslist-area">
+            <div class="filters-area sans" style="font-size: 0.8rem; margin: 1.2rem 0;">
+                <div class="filter-group inline-block">
+                    <label for="js-listFilter-category">Category:</label>
+                    <select name="js-listFilter-category" id="js-listFilter-category">
+                        <option value="ALL">All Categories</option>
+                    </select>
+                </div>
+            </div>
+            <!-- <div style="background: #AAA; height: 1px; margin: 2rem 0;"></div> -->
+            <div class="fontslist-area" style="margin: 1.2rem 0;">
                 <div class="fontslist-area-list"></div>
-                <div class="fontslist-area-list-appendix"></div>
+                <div class="fontslist-area-list-appendix serif"></div>
             </div>
         </div>
 
@@ -180,8 +209,12 @@
         (function () {
             const app = {
                 ram: {
+                    categoriesList: [],
                     fontIdList: [],
-                    fontDataMap: {}
+                    fontDataMap: {},
+                    filterData: {
+                        category: 'ALL'
+                    }
                 }
             };
             window.app_3639cc171fa746bdbf162d44666c3fa8 = app;
@@ -191,9 +224,10 @@
             // App functions
             app.renderFontsListDom = function () {
                 const listDiv = document.querySelector('.fontslist-area-list');
-                listDiv.innerHTML = app.ram.fontIdList.map(function (fontid) {
+                listDiv.innerHTML = app.ram.fontIdList.map(function (fontid, itr) {
                     const data = app.ram.fontDataMap[fontid];
                     return `<div class="fontslist-item-fontInfoCard"
+                        data-evenodd="${(itr + 1) % 2}"
                         data-shown="true" data-search-term=" ${data.id} ${data.family.toLowerCase()} "
                         data-font-id="${data.id}" data-font-family="${data.family}"
                         data-font-category="${data.category}" data-variants-count=${data.list.length}
@@ -227,26 +261,40 @@
                 const box = e.target;
                 box.dataset.dirty = 'true';
             };
-            app.updateSearchResultList = function () {
-                console.log(`hello updateSearchResultList`);
+            app.updateSearchResultList = function (forceRun) {
                 const box = document.querySelector('#js-mainSearchBox');
-                const val = box.value.trim().toLowerCase();
-                if (box.dataset.dirty === 'false') {
+                const requestSearchTerm = box.value.trim().toLowerCase();
+                if (!forceRun && box.dataset.dirty === 'false') {
                     return 0;
                 };
                 box.dataset.dirty = 'false';
-                if (val.trim().length === 0) {
+                let evenodd = 0;
+                if (requestSearchTerm.trim().length === 0) {
+                    // Reset list view to show all (within the category!)
                     document.querySelectorAll('.fontslist-item-fontInfoCard').forEach(function (card) {
-                        card.dataset.shown = 'true';
+                        let shown = false;
+                        if (app.ram.filterData.category === 'ALL' || card.dataset.fontCategory.startsWith(app.ram.filterData.category)) {
+                            shown = true;
+                            evenodd = (evenodd + 1) % 2;
+                        };
+                        card.dataset.shown = shown;
+                        card.dataset.evenodd = evenodd;
                     });
                     return 0;
                 } else {
                     app.ram.fontIdList.forEach(function (id) {
-                        if (app.ram.fontDataMap[id].searchTerm.indexOf(val) >= 0) {
+                        if (!app.ram.fontDataMap[id].category.startsWith(app.ram.filterData.category) && app.ram.filterData.category !== 'ALL') {
+                            document.querySelector(`.fontslist-item-fontInfoCard[data-font-id=${id}]`).dataset.shown = false;
+                            document.querySelector(`.fontslist-item-fontInfoCard[data-font-id=${id}]`).dataset.evenodd = evenodd;
+                            return 0;
+                        };
+                        if (app.ram.fontDataMap[id].searchTerm.indexOf(requestSearchTerm) >= 0) {
+                            evenodd = (evenodd + 1) % 2;
                             document.querySelector(`.fontslist-item-fontInfoCard[data-font-id=${id}]`).dataset.shown = true;
                         } else {
                             document.querySelector(`.fontslist-item-fontInfoCard[data-font-id=${id}]`).dataset.shown = false;
-                        }
+                        };
+                        document.querySelector(`.fontslist-item-fontInfoCard[data-font-id=${id}]`).dataset.evenodd = evenodd;
                     });
                 };
                 if (document.querySelector('.fontslist-area-list').offsetHeight < 10) {
@@ -265,13 +313,16 @@
             const xhr = new XMLHttpRequest();
             xhr.open('GET', './font-family-datamap.txt');
             xhr.onload = function () {
+                // Initialize database
                 let arr = xhr.responseText.trim().split('\n');
+                let categoriesSet = new Set();
                 arr.forEach(function (dataline) {
                     console.log(dataline);
                     if (dataline.startsWith('@family|')) {
                         const [id, family, category] = dataline.split('|').slice(1);
                         app.ram._currentParsingId = id;
                         app.ram.fontIdList.push(id);
+                        categoriesSet.add(category);
                         app.ram.fontDataMap[id] = {
                             id, family, category, searchTerm: `${category} ${id} ${family.toLowerCase()}`
                         };
@@ -281,7 +332,34 @@
                         app.ram.fontDataMap[app.ram._currentParsingId].list = list;
                     };
                 });
+                let categoriesList_tmp = ['114514'];
+                categoriesSet.forEach(x => categoriesList_tmp.push(x));
+                app.ram.categoriesList = categoriesList_tmp.sort();
                 console.log(app.ram);
+
+                // Initialize UI: Query filters
+                document.querySelector('#js-listFilter-category').innerHTML += app.ram.categoriesList.map(function (catname, itr, arr) {
+                    if (catname === '114514') {
+                        return '';
+                    };
+                    const lastPrefix = arr[itr - 1].split('-')[0];
+                    const currentPrefix = catname.split('-')[0];
+                    if (lastPrefix !== currentPrefix) {
+                        console.log('-----------------------------------');
+                        console.log(`catname=${catname}          ${lastPrefix} -> ${currentPrefix}`);
+                        return `<option disabled value="groupsepline-${catname}">--------------------</option>
+                        <option value="${currentPrefix}-">(All ${currentPrefix[0].toUpperCase() + currentPrefix.slice(1)})</option>
+                        <option value="${catname}">${catname}</option>`;
+                    };
+                    console.log(`catname=${catname}          ${lastPrefix} -> ${currentPrefix}`);
+                    return `<option value="${catname}">${catname}</option>`;
+                }).join('');
+                document.querySelector('#js-listFilter-category').addEventListener('input', function (e) {
+                    app.ram.filterData.category = e.target.value;
+                    app.updateSearchResultList(true);
+                });
+
+                // Initialize UI: Fonts list view
                 app.renderFontsListDom();
             };
             xhr.send();

@@ -1,0 +1,20 @@
+id="urw-bookman"
+family="URW Bookman"
+cat="serif-trans"
+about="URW Bookman is a transitional serif font with wide and legible shapes; slightly bolder than others. Based on Old Style Antique."
+infopage="https://fontesk.com/bookman-typeface/"
+license="OFL"
+
+download="https://fontesk.com/download/39326/"
+format="zip"
+sha256="3c936d1f0b319f03fe99a73fb6466ae8a1cfa25257c8e70b245b169b9795e7d9"
+
+convert_from="otf"
+
+weight_map="
+400:URWBookman-Light
+400i:URWBookman-LightItalic
+500:URWBookman-Demi
+500i:URWBookman-DemiItalic
+"
+

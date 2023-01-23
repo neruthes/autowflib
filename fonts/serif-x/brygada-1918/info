@@ -1,0 +1,24 @@
+id="brygada-1918"
+family="Brygada 1918"
+cat="serif-x"
+about="Brygada 1918 is a revival project created for the celebration of the 100 years of independance of the Republic of Poland in 2018."
+infopage="https://brygada1918.eu/"
+license="OFL"
+
+download="https://fonts.google.com/download?family=Brygada%201918"
+format="zip"
+sha256="3e5b99ca7e98dc6ce9ca18a136c718fc05516320abdbe32580739fa8ecc57dfe"
+
+convert_from="ttf"
+
+weight_map="
+400:Brygada1918-Regular
+400i:Brygada1918-Italic
+500:Brygada1918-Medium
+500i:Brygada1918-MediumItalic
+600:Brygada1918-SemiBold
+600i:Brygada1918-SemiBoldItalic
+700:Brygada1918-Bold
+700i:Brygada1918-BoldItalic
+"
+
