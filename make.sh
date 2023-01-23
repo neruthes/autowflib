@@ -93,6 +93,10 @@ case $1 in
         rsync -av --delete wwwsrc/ wwwdist/
         rsync -av wwwextra/ wwwdist/
         du -xhd2 wwwdist
+        bash $0 pkgdist
+        if [[ $USER == neruthes ]]; then
+            cfoss pkgdist/wwwdist.tar
+        fi
         ;;
     pkgdist | pkgdist/)
         cd $REPODIR/wwwdist && tar -cf $REPODIR/pkgdist/wwwdist.tar .
