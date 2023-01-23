@@ -146,3 +146,4 @@ case $1 in
         echo "[ERROR] No rule to make '$1'. Stop."
         ;;
 esac
+
