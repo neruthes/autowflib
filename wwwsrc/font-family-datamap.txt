@@ -4,6 +4,10 @@
 @list|EliteMath-New.woff2|EliteMath-Wide.woff2
 @family|libertinus-serif|Libertinus Serif|serif-trans
 @list|LibertinusSerif-Bold.woff2|LibertinusSerif-BoldItalic.woff2|LibertinusSerif-Italic.woff2|LibertinusSerif-Regular.woff2|LibertinusSerif-Semibold.woff2|LibertinusSerif-SemiboldItalic.woff2
+@family|lucette|Lucette|serif-trans
+@list|Lucette-Regular.woff2|Lucette-Regularitalic.woff2
+@family|new-heterodox-mono|New Heterodox Mono|mono-serif
+@list|NewHeterodoxMono-Bold.woff2|NewHeterodoxMono-Book.woff2
 @family|smiley-sans|Smiley Sans|sans-cjk
 @list|SmileySans-Oblique.woff2
 @family|x-typewriter|X Typewriter|mono-type

@@ -58,7 +58,7 @@ case $1 in
         tagname="snapshot-$(TZ=UTC date +%Y%m%d)"
         echo "$ git tag $tagname && git push origin $tagname"
         echo "url:      https://github.com/neruthes/autowflib/releases/new"
-        echo "msg:      This snapshot contains $(find cdndist/awfl-cdn/fonts -name '*.css' | wc -l) font families and $(find cdndist/awfl-cdn/fonts -name '*.woff2' | wc -l) WOFF2 artifacts."
+        echo "msg:      This snapshot contains $(find distdir/fonts -name '*.css' | wc -l) font families and $(find distdir/fonts -name '*.woff2' | wc -l) WOFF2 artifacts."
         echo "files:"
         for i in pkgdist/*; do
             realpath $i
@@ -89,7 +89,7 @@ case $1 in
         ;;
     wwwdist | wwwdist/)
         bash $0 www_catalog
-        cat cdndist/awfl-cdn/css/*.css > wwwsrc/full.css
+        cat distdir/css/*.css > wwwsrc/full.css
         rsync -av --delete wwwsrc/ wwwdist/
         rsync -av wwwextra/ wwwdist/
         du -xhd2 wwwdist

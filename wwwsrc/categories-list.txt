@@ -1,3 +1,4 @@
+mono-serif
 mono-type
 sans-cjk
 serif-trans

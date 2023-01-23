@@ -95,7 +95,7 @@ function src_fetch() {
     mkdir -pv "$(dirname "$download_path")"
     log INFO curl "$download" -o "$download_path"
     http_user_agent_str='User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/109.0'
-    wget "$download" -O "$download_path"
+    wget --header="User-Agent: $http_user_agent_str" "$download" -O "$download_path"
 }
 
 function src_verify() {

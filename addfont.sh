@@ -57,15 +57,17 @@ say "I am starting to download it to '$download_path'. Ready?\n(y/n)> "
 read USER_LAST_INPUT
 [[ "$USER_LAST_INPUT" == n* ]] && exit 0
 
+http_user_agent_str='User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/109.0'
+
 if [[ -e "$download_path" ]]; then
     say "The font archive seems already downloaded. Should I download again?\n(y/n)> "
     read USER_LAST_INPUT
     [[ "$USER_LAST_INPUT" == n* ]] && return 0
     say "Starting the download job..."
-    wget "$f_download" -O "$download_path" || exit 1
+    wget --header="User-Agent: $http_user_agent_str" "$f_download" -O "$download_path" || exit 1
 else
     say "Starting the download job..."
-    wget "$f_download" -O "$download_path" || exit 1
+    wget --header="User-Agent: $http_user_agent_str" "$f_download" -O "$download_path" || exit 1
 fi
 
 f_sha256="$(sha256sum "$download_path" | cut -d' ' -f1)"
@@ -129,7 +131,7 @@ if [[ $USER_LAST_INPUT == y* ]]; then
     mkdir -p "$file_dir_path"
     file_path="$file_dir_path/info"
     echo "$output_file_content" > "$file_path"
-    say "Your file is written into '$file_path'.\n"
+    say "Your file is written into '$file_path'. Remember to set the 'weight_map' variable!\n"
     say "Next, you may run './make.sh $file_dir_path' to build for the font."
 fi
 exit 0

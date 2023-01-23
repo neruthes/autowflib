@@ -31,8 +31,8 @@
         body {
             font-family: -apple-system, 'SF Pro Text', BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             font-size: 5mm;
-            padding: 0px;
-            margin: 0px;
+            padding: 0rem;
+            margin: 0rem;
         }
 
         a {
@@ -44,8 +44,8 @@
 
         .big-part {
             max-width: 42rem;
-            padding: 30px;
-            margin: 30px auto;
+            padding: 2rem;
+            margin: 2rem auto;
         }
 
         .big-part footer {
@@ -67,7 +67,7 @@
             </header>
             <div class="top-nav">
             </div>
-            <div style="height: 1px; background: #BBB;"></div>
+            <div style="height: 1px; background: #BBB; margin: 0 0 1rem;"></div>
 
             <style>
                 .fontslist-area-list {
@@ -81,11 +81,11 @@
                     }
 
                     .fontslist-item-fontInfoCard[data-shown="true"]:nth-child(2n+0) {
-                        padding-left: 10px;
+                        padding-left: 0.6rem;
                     }
 
                     .fontslist-item-fontInfoCard[data-shown="true"]:nth-child(2n+1) {
-                        padding-right: 10px;
+                        padding-right: 0.6rem;
                     }
                 }
 
@@ -98,9 +98,9 @@
                     font-variant: normal;
                     font-size: 1rem;
                     border: 1px solid #AAA;
-                    border-radius: 5px;
-                    margin: 0 0 20px;
-                    padding: 20px 20px;
+                    border-radius: 0.4rem;
+                    margin: 0 0 1.2rem;
+                    padding: 1rem 1rem;
                 }
 
                 .fontInfoCard--toparea {
@@ -108,7 +108,9 @@
                 }
 
                 .fontInfoCard--midarea {
-                    padding: 8px 0;
+                    font-size: 0.8rem;
+                    padding: 0.4rem 0;
+                    opacity: 0.6;
                 }
 
                 .fontInfoCard--subarea {
@@ -122,13 +124,9 @@
 
                 .fontInfoCard--variants {
                     float: right;
-                    font-size: 0.8rem;
-                    opacity: 0.6;
                 }
 
                 .fontInfoCard--category {
-                    font-size: 0.8rem;
-                    opacity: 0.6;
                 }
 
             </style>
@@ -136,11 +134,11 @@
                 <input id="js-mainSearchBox" type="text" placeholder="Search font name" style="
                     font-size: 0.8rem;
                     border: 1px solid #AAA;
-                    border-radius: 5px;
+                    border-radius: 0.4rem;
                     display: block;
                     width: 100%;
-                    padding: 8px;
-                    margin: 0 0 50px;
+                    padding: 0.5rem;
+                    margin: 0 0 3rem;
                 ">
             </div>
             <div class="fontslist-area">
@@ -203,15 +201,18 @@
                                 class="fontInfoCard--toparea"
                             >
                                 <span class="fontInfoCard--family">${data.family}</span>
-                                <span class="fontInfoCard--variants">${data.list.length} variants</span>
                             </div>
-                                <div class="fontInfoCard--midarea">
-                                    <div class="fontInfoCard--category">${data.category}</div>
+                            <div class="fontInfoCard--midarea">
+                                <div class="fontInfoCard--variants">${data.list.length} variants</div>
+                                <div class="fontInfoCard--category">${data.category}</div>
+                                <div style="clear: both;"></div>
                             </div>
                             <div class="fontInfoCard--subarea">
                                 <a target="_blank" href="https://autowflibcdn.pages.dev/awfl-cdn/css/${data.id}.css">CSS Link</a>
                                 &nbsp;&nbsp;&nbsp;
                                 <a target="_blank" href="./preview/?id=${data.id}&family=${encodeURIComponent(data.family)}">Preview</a>
+                                &nbsp;&nbsp;&nbsp;
+                                <a target="_blank" href="https://github.com/neruthes/autowflib/blob/master/fonts/${data.category}/${data.id}/info">Definition</a>
                             </div>
                         </div>
                     </div>`;

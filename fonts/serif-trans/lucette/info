@@ -1,0 +1,18 @@
+id="lucette"
+family="Lucette"
+cat="serif-trans"
+about="Inspired by Times New Roman. The peculiarities of this typeface are in combination of a light curve and a straight and modern serif."
+infopage="https://yannlinguinou.com/LUCETTE-1"
+license="OFL"
+
+download="https://fontesk.com/download/77464/"
+format="zip"
+sha256="8248b17158bc89da4a7ecb5ff596e48d75f489d7d378127ab8917ab29efd9fbb"
+
+convert_from="skip"
+
+weight_map="
+400:Lucette-Regular
+400i:Lucette-Regularitalic
+"
+

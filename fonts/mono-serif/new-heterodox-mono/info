@@ -1,0 +1,18 @@
+id="new-heterodox-mono"
+family="New Heterodox Mono"
+cat="mono-serif"
+about="A Didone-esque Monospaced Typeface based on Alexey Kryukov's Old Standard TT."
+infopage="https://github.com/hckiang/font-new-heterodox-mono"
+license="OFL"
+
+download="https://github.com/hckiang/font-new-heterodox-mono/archive/refs/tags/v0.0.3.zip"
+format="zip"
+sha256="2b8c46c5b160b8c7ef02f45f664f94b81dd518b853c31f010faad4e129718d6c"
+
+convert_from="otf"
+
+weight_map="
+400:NewHeterodoxMono-Book
+600:NewHeterodoxMono-Bold
+"
+
