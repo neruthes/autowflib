@@ -87,7 +87,7 @@ case $1 in
         sed -i 's/|$//g' $outfn
         cat $outfn
         ;;
-    wwwdist | wwwdist/)
+    w | wwwdist | wwwdist/)
         bash $0 www_catalog
         cat distdir/css/*.css > wwwsrc/full.css
         rsync -av --delete wwwsrc/ wwwdist/
@@ -95,10 +95,10 @@ case $1 in
         du -xhd2 wwwdist
         if [[ $USER == neruthes ]]; then
             echo "[INFO] Remember to upload the tarball before pushing to GitHub master:"
-            echo "    $  bash $0 pkgdist && cfoss pkgdist/wwwdist.tar"
+            echo "    $  bash $0 cdn cf pkgdist && cfoss pkgdist/wwwdist.tar && u"
         fi
         ;;
-    pkgdist | pkgdist/)
+    p | pkgdist | pkgdist/)
         cd $REPODIR/wwwdist && tar -cf $REPODIR/pkgdist/wwwdist.tar .
         cd $REPODIR/cdndist && tar --xz -cf $REPODIR/pkgdist/cdn-mirror.tar.xz awfl-cdn
         cd $REPODIR

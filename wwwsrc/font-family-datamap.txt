@@ -14,6 +14,8 @@
 @list|NewHeterodoxMono-Bold.woff2|NewHeterodoxMono-Book.woff2
 @family|smiley-sans|Smiley Sans|sans-cjk
 @list|SmileySans-Oblique.woff2
+@family|sunday-masthead|Sunday Masthead|display-sans
+@list|SundayMasthead-Regular.woff2
 @family|urw-bookman|URW Bookman|serif-trans
 @list|URWBookman-Demi.woff2|URWBookman-DemiItalic.woff2|URWBookman-Light.woff2|URWBookman-LightItalic.woff2
 @family|x-typewriter|X Typewriter|mono-type

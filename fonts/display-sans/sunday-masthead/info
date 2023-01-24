@@ -1,0 +1,15 @@
+id="sunday-masthead"
+family="Sunday Masthead"
+cat="display-sans"
+about="A DIN-like display font for headlines."
+infopage="https://github.com/dennisgrauel/The-Sunday-Paper-fonts"
+license="OFL"
+
+download="https://fontesk.com/download/95739/"
+format="zip"
+sha256="ae44119dac509361624532eb5df85bfe76a65447deb98126a99c400cc8350cc4"
+
+convert_from="otf"
+
+weight_map="400:SundayMasthead-Regular"
+

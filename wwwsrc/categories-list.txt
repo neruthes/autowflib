@@ -1,3 +1,4 @@
+display-sans
 mono-serif
 mono-type
 sans-cjk

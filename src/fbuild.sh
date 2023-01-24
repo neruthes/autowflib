@@ -93,8 +93,8 @@ function src_fetch() {
         return 0
     fi
     mkdir -pv "$(dirname "$download_path")"
-    log INFO curl "$download" -o "$download_path"
     http_user_agent_str='User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/109.0'
+    log INFO wget --header="User-Agent: $http_user_agent_str" "$download" -O "$download_path"
     wget --header="User-Agent: $http_user_agent_str" "$download" -O "$download_path"
 }
 
@@ -149,7 +149,7 @@ function webfont_collect() {
     function collect_woff2_file() {
         woffid="$(basename "$fn" | sed 's|.woff2$||')"
         if [[ -z "$(grep ":$woffid$" <<< "$weight_map")" ]]; then
-            echo "**  debug:  There is no weightmap entry for this file '$woffid'" >&2
+            echo "**  debug:  There is no weight_map entry for this file '$woffid'" >&2
             return 0
         fi
         mv -v "$fn" "$workdir/output/$(basename "$fn")"
@@ -179,7 +179,7 @@ function css_generate() {
             echo "**  debug:  woffid=$woffid" >&2
             this_woff_font_style="normal"
             if [[ -z "$(grep ":$woffid$" <<< "$weight_map")" ]]; then
-                echo "**  debug:  There is no weightmap entry for this file!" >&2
+                echo "**  debug:  There is no weight_map entry for this file!" >&2
                 return 0
             fi
             grep -qs "i:$woffid$" <<< "$weight_map" && this_woff_font_style="italic"
