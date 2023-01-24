@@ -130,6 +130,12 @@
                     border-radius: 0.4rem;
                     margin: 0 0 1.2rem;
                     padding: 1rem 1rem;
+                    transition: all 120ms ease;
+                }
+
+                .fontInfoCard--inner:hover {
+                    transform: scale(1.015) translateY(-0.2rem);
+                    box-shadow: rgba(0, 0, 0, 0.09) 0 0.8rem 2.75rem 0.2rem;
                 }
 
                 .fontInfoCard--toparea {
@@ -157,7 +163,7 @@
 
             </style>
             <div class="search-area sans" style="margin: 1.2rem 0;">
-                <input id="js-mainSearchBox" type="text" placeholder="Search font name" style="
+                <input id="js-mainSearchBox" type="text" placeholder="Search font by name" style="
                     font-size: 0.8rem;
                     border: 1px solid #AAA;
                     border-radius: 0.4rem;
@@ -259,15 +265,15 @@
             };
             app.searchBoxInputEventHandler = function (e) {
                 const box = e.target;
-                box.dataset.dirty = 'true';
+                app.ram.listingCriteriaDirty = true;
             };
             app.updateSearchResultList = function (forceRun) {
                 const box = document.querySelector('#js-mainSearchBox');
                 const requestSearchTerm = box.value.trim().toLowerCase();
-                if (!forceRun && box.dataset.dirty === 'false') {
+                if (!forceRun && app.ram.listingCriteriaDirty === false) {
                     return 0;
                 };
-                box.dataset.dirty = 'false';
+                app.ram.listingCriteriaDirty = false;
                 let evenodd = 0;
                 if (requestSearchTerm.trim().length === 0) {
                     // Reset list view to show all (within the category!)
@@ -305,7 +311,7 @@
             };
             document.querySelector('#js-mainSearchBox').value = '';
             document.querySelector('#js-mainSearchBox').addEventListener('input', app.searchBoxInputEventHandler);
-            window.setInterval(app.updateSearchResultList, 150);
+            window.setInterval(app.updateSearchResultList, 100);
 
 
 
@@ -356,11 +362,14 @@
                 }).join('');
                 document.querySelector('#js-listFilter-category').addEventListener('input', function (e) {
                     app.ram.filterData.category = e.target.value;
-                    app.updateSearchResultList(true);
+                    app.ram.listingCriteriaDirty = true;
                 });
 
                 // Initialize UI: Fonts list view
                 app.renderFontsListDom();
+
+                // Initialize UI: Miscellaneous stuff
+                document.querySelector('#js-mainSearchBox').placeholder = `Search font by name in ${app.ram.fontIdList.length} families`;
             };
             xhr.send();
         })();
