@@ -1,0 +1,10 @@
+id="crimson-text"
+family="Crimson Text"
+cat="serif-old"
+about="Crimson Text is a font family for book production in the tradition of beautiful oldstyle typefaces."
+infopage="https://github.com/googlefonts/Crimson"
+license="OFL"
+
+relay_upstream="Google Fonts"
+css_url="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
+minikv="vars=6"

@@ -24,6 +24,8 @@
     <link rel="stylesheet" href="https://autowflibcdn.pages.dev/awfl-cdn/css/nacelle.css">
 
     <style>
+        @import url('./full.css');
+
         * {
             text-rendering: optimizeLegibility;
             box-sizing: border-box;
@@ -239,16 +241,16 @@
                         data-font-category="${data.category}" data-variants-count=${data.list.length}
                     >
                         <div class="fontInfoCard--inner">
-                            <div style="
-                                    background: url('./fontname-thumbnail/${data.id[0]}/${data.id}.png') left center no-repeat scroll;
-                                    background-size: auto 80%;
-                                "
+                            <div style="${({
+                            fonts: `background: url('./fontname-thumbnail/${data.id[0]}/${data.id}.png') left center no-repeat scroll; background-size: auto 80%;`,
+                            relay: ''
+                        })[data.minikv.type]}"
                                 class="fontInfoCard--toparea"
                             >
-                                <span class="fontInfoCard--family">${data.family}</span>
+                                <span class="fontInfoCard--family" style="${data.minikv.type === 'relay' ? `color: inherit; font-family: ${data.family};` : ''}">${data.family}</span>
                             </div>
                             <div class="fontInfoCard--midarea">
-                                <div class="fontInfoCard--variants">${data.list.length} variants</div>
+                                <div class="fontInfoCard--variants">${data.minikv.vars || data.list.length} variants</div>
                                 <div class="fontInfoCard--category">${data.category}</div>
                                 <div style="clear: both;"></div>
                             </div>
@@ -258,6 +260,7 @@
                                 <a target="_blank" href="./preview/?id=${data.id}&family=${encodeURIComponent(data.family)}">Preview</a>
                                 &nbsp;&nbsp;&nbsp;
                                 <a target="_blank" href="https://github.com/neruthes/autowflib/blob/master/fonts/${data.category}/${data.id}/info">Definition</a>
+                                ${data.minikv.type === 'relay' ? '&nbsp;&nbsp;&nbsp;<span style="opacity: 0.5;">(Relayed)</span>' : ''}
                             </div>
                         </div>
                     </div>`;
@@ -325,12 +328,20 @@
                 arr.forEach(function (dataline) {
                     console.log(dataline);
                     if (dataline.startsWith('@family|')) {
-                        const [id, family, category] = dataline.split('|').slice(1);
+                        const [id, family, category, minikvRaw] = dataline.split('|').slice(1);
                         app.ram._currentParsingId = id;
                         app.ram.fontIdList.push(id);
                         categoriesSet.add(category);
+
+                        const minikv = {};
+                        minikvRaw.split('&').forEach(function (kv) {
+                            const [k, v] = kv.split('=');
+                            minikv[k] = v;
+                        });
+
                         app.ram.fontDataMap[id] = {
-                            id, family, category, searchTerm: `${category} ${id} ${family.toLowerCase()}`
+                            id, family, category, minikv,
+                            searchTerm: `${category} ${id} ${family.toLowerCase()}`
                         };
                     };
                     if (dataline.startsWith('@list|')) {

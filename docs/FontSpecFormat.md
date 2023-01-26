@@ -100,7 +100,7 @@ Available global minor categories:
 | other | Can hardly be categorized | -                |
 
 Available local minor categories by allowed range:
-- sans
+- serif
   - `did`: Didone. E.g. Didot.
 - sans
   - `grot`: Grotesque and neo-grotesque. E.g. Helvetica.

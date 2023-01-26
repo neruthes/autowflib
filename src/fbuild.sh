@@ -17,9 +17,9 @@
 # src_fetch                 Download source (tar/zip).
 # src_verify                Verify against the existing hash.
 # src_extract               Untar or unzip.
-# src_build                 Convert OTF/TTF to WOFF.
-# webfont_collect           Collect the WOF files.
-# css_generate              Generate CSS for the WOFF files.
+# src_build                 Convert OTF/TTF to WOFF2.
+# webfont_collect           Collect the WOFF2 files.
+# css_generate              Generate CSS for the WOFF2 files.
 # artifacts_install         Install the artifacts to distdir.
 # workdir_cleanup           Delete everything in workdir.
 #
@@ -260,14 +260,16 @@ artifacts_install
 workdir_cleanup
 "
 
-if [[ $2 == full ]]; then
+subcmd="$2"
+[[ -z "$subcmd" ]] && subcmd=full
+if [[ $subcmd == full ]]; then
     for phase_name in $phases_list; do
         cd "$REPODIR"
         printf '\n\n'
-        log INFO "[fbuild.sh]  Entering phase '$phase_name'"
+        log INFO "[fbuild.sh]  Entering phase '$phase_name'."
         $phase_name
     done
     log INFO "[fbuild.sh]  My job is done. Good bye."
 else
-    $2
+    $subcmd
 fi

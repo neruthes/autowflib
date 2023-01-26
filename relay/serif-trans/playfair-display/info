@@ -1,0 +1,11 @@
+id="playfair-display"
+family="Playfair Display"
+cat="serif-trans"
+about="Playfair is a transitional serif font. During Enlightenment, broad nib quills were replaced by pointed steel pens."
+infopage="https://github.com/clauseggers/Playfair"
+license="OFL"
+
+relay_upstream="Google Fonts"
+css_url="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+
+minikv="vars=12"

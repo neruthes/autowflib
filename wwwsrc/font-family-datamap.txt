@@ -1,22 +1,26 @@
-@family|brygada-1918|Brygada 1918|serif-x
+@family|brygada-1918|Brygada 1918|serif-x|type=fonts
 @list|Brygada1918-Bold.woff2|Brygada1918-BoldItalic.woff2|Brygada1918-Italic.woff2|Brygada1918-Medium.woff2|Brygada1918-MediumItalic.woff2|Brygada1918-Regular.woff2|Brygada1918-SemiBold.woff2|Brygada1918-SemiBoldItalic.woff2
-@family|c059|C059|serif-trans
+@family|c059|C059|serif-trans|type=fonts
 @list|C059-BdIta.woff2|C059-Bold.woff2|C059-Italic.woff2|C059-Roman.woff2
-@family|elite-math|Elite Math|mono-type
+@family|crimson-text|Crimson Text|serif-old|vars=6&type=relay
+@list|01c9d03694463859.woff2|023015097ca7751c.woff2|05c7f644f93caa08.woff2|0aa5b4544f234804.woff2|17124e85f32aab19.woff2|2386932f95fb33c7.woff2|402fb087b52e44cd.woff2|4c24fe6d37aa0381.woff2|5d4dbed827f1940b.woff2|65bdadcb06894a88.woff2|671c2f3d4d890c1d.woff2|70173f000fd5d541.woff2|81fbc510cb2f983b.woff2|8e5f37d601e4c90e.woff2|b918e9d5b2af78eb.woff2|ce8c850cd8e2b0a5.woff2|eee5fb7252454dcf.woff2|ef9f088ff4fc06b1.woff2
+@family|elite-math|Elite Math|mono-type|type=fonts
 @list|EliteMath-New.woff2|EliteMath-Wide.woff2
-@family|libertinus-serif|Libertinus Serif|serif-trans
+@family|libertinus-serif|Libertinus Serif|serif-trans|type=fonts
 @list|LibertinusSerif-Bold.woff2|LibertinusSerif-BoldItalic.woff2|LibertinusSerif-Italic.woff2|LibertinusSerif-Regular.woff2|LibertinusSerif-Semibold.woff2|LibertinusSerif-SemiboldItalic.woff2
-@family|lucette|Lucette|serif-trans
+@family|lucette|Lucette|serif-trans|type=fonts
 @list|Lucette-Regular.woff2|Lucette-Regularitalic.woff2
-@family|nacelle|Nacelle|sans-grot
+@family|nacelle|Nacelle|sans-grot|type=fonts
 @list|Nacelle-Black.woff2|Nacelle-BlackItalic.woff2|Nacelle-Bold.woff2|Nacelle-BoldItalic.woff2|Nacelle-Heavy.woff2|Nacelle-HeavyItalic.woff2|Nacelle-Italic.woff2|Nacelle-Light.woff2|Nacelle-LightItalic.woff2|Nacelle-Regular.woff2|Nacelle-SemiBold.woff2|Nacelle-SemiBoldItalic.woff2|Nacelle-Thin.woff2|Nacelle-ThinItalic.woff2|Nacelle-UltraLight.woff2|Nacelle-UltraLightItalic.woff2
-@family|new-heterodox-mono|New Heterodox Mono|mono-serif
+@family|new-heterodox-mono|New Heterodox Mono|mono-serif|type=fonts
 @list|NewHeterodoxMono-Bold.woff2|NewHeterodoxMono-Book.woff2
-@family|smiley-sans|Smiley Sans|sans-cjk
+@family|playfair-display|Playfair Display|serif-trans|vars=12&type=relay
+@list|0c16173f24894968.woff2|155e4349868fcae9.woff2|2a597d742000d694.woff2|51d9d2eb11f849e3.woff2|896a85bd4f5329b1.woff2|a21d7de3ea539cae.woff2|a2aaec7241a08f47.woff2|e2054b157481c3f3.woff2
+@family|smiley-sans|Smiley Sans|sans-cjk|type=fonts
 @list|SmileySans-Oblique.woff2
-@family|sunday-masthead|Sunday Masthead|display-sans
+@family|sunday-masthead|Sunday Masthead|display-sans|type=fonts
 @list|SundayMasthead-Regular.woff2
-@family|urw-bookman|URW Bookman|serif-trans
+@family|urw-bookman|URW Bookman|serif-trans|type=fonts
 @list|URWBookman-Demi.woff2|URWBookman-DemiItalic.woff2|URWBookman-Light.woff2|URWBookman-LightItalic.woff2
-@family|x-typewriter|X Typewriter|mono-type
+@family|x-typewriter|X Typewriter|mono-type|type=fonts
 @list|XTypewriter-Bold.woff2|XTypewriter.woff2

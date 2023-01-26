@@ -33,11 +33,15 @@ case $1 in
             id="$(basename $1)"
             TARGET_ID="$(dirname $1)/$id"
             (bash src/fbuild.sh $TARGET_ID full || exit 1) | tee buildlog.txt
-            # echo "-----------------------------------"
-            # echo "Run this command to upload:"
-            # echo "$ " bash $0 "cdndist/awfl-cdn/css/$id.css" "cdndist/awfl-cdn/$TARGET_ID/*"
-            # echo "-----------------------------------"
             id="$id" bash $0 thumbnail
+        fi
+        ;;
+    relay/*)
+        if [[ -e $1/info ]]; then
+            id="$(basename $1)"
+            TARGET_ID="$(dirname $1)/$id"
+            (bash src/relay.sh $TARGET_ID full || exit 1) | tee buildlog.txt
+            # id="$id" bash $0 thumbnail
         fi
         ;;
     thumbnail)
@@ -80,8 +84,12 @@ case $1 in
         printf '' > $outfn
         distdir_families="$(ls distdir/fonts/*/*/*.css | cut -d/ -f4 | sort)"
         for id in $distdir_families; do
-            cat="$(find fonts -type d -name $id | cut -d/ -f2)"
-            echo "@family|$id|$(grep '^family=' fonts/$cat/$id/info | cut -d= -f2 | tr -d \'\")|$cat" >> $outfn
+            info_file="$(ls */*/$id/info | head -n1)"
+            type="$(cut -d/ -f1 <<< "$info_file")"
+            cat="$(cut -d/ -f2 <<< "$info_file")"
+            minikv_prefix="$(grep '^minikv=' "$info_file" | cut -d'"' -f2)"
+            minikv="type=$type"
+            echo "@family|$id|$(grep '^family=' */$cat/$id/info | head -n1 | cut -d= -f2 | tr -d \'\")|$cat|$minikv_prefix&$minikv" | sed 's/|&/|/' >> $outfn
             echo "@list|$(ls distdir/fonts/$cat/$id | grep 'woff2$' | tr '\n' '|')" >> $outfn
         done
         sed -i 's/|$//g' $outfn
@@ -143,7 +151,8 @@ case $1 in
         cfoss pkgdist/wwwdist.tar
         bash $0 r2
         git add .
-        git commit -m "Automatic deploy command: $(TZ=UTC date -Is | cut -c1-19 | sed 's/T/ /')"
+        [[ -z "$msg" ]] && msg="Automatic deploy command: $(TZ=UTC date -Is | cut -c1-19 | sed 's/T/ /')"
+        git commit -m "$msg"
         git push
         ;;
     *)
