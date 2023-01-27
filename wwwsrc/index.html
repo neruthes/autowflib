@@ -19,10 +19,6 @@
     <meta name="twitter:description" content="AutoWFLib Project | Automated Web Font Library">
     <meta name="twitter:image" content="./favicon.png">
 
-    <link rel="stylesheet" href="https://autowflibcdn.pages.dev/awfl-cdn/css/brygada-1918.css">
-    <link rel="stylesheet" href="https://autowflibcdn.pages.dev/awfl-cdn/css/c059.css">
-    <link rel="stylesheet" href="https://autowflibcdn.pages.dev/awfl-cdn/css/nacelle.css">
-
     <style>
         @import url('./full.css');
 
@@ -35,8 +31,6 @@
 
         html,
         body {
-            /* font-family: -apple-system, 'SF Pro Text', BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
-            /* font-family: 'Brygada 1918', serif; */
             font-size: 5mm;
             padding: 0rem;
             margin: 0rem;
@@ -56,8 +50,6 @@
         }
 
         h1 {
-            font-weight: 400;
-            font-variant-caps: small-caps;
         }
 
         .big-part footer {
@@ -74,21 +66,21 @@
         }
 
         .serif {
-            font-family: 'Brygada 1918', serif;
+            font-family: 'Brygada 1918', serif, 'Noto Serif CJK SC';
         }
 
         .sans {
-            font-family: 'Nacelle', sans-serif;
+            font-family: 'IBM Plex Sans', sans-serif, 'Noto Sans CJK SC';
         }
 
     </style>
 </head>
 
 <body>
-    <div class="grand-container serif">
+    <div class="grand-container sans">
 
         <div class="big-part" style="min-height: 700px;">
-            <header>
+            <header class="sans">
                 <h1>AutoWFLib</h1>
                 <p style="font-size: 0.85rem;">
                     Automated Web Font Library.
@@ -101,7 +93,6 @@
 
             <style>
                 .fontslist-area-list {
-                    font-family: 'Nacelle', sans-serif;
                     font-size: 0rem;
                 }
 
@@ -183,13 +174,13 @@
                 </div>
             </div>
             <!-- <div style="background: #AAA; height: 1px; margin: 2rem 0;"></div> -->
-            <div class="fontslist-area" style="margin: 1.2rem 0;">
+            <div class="fontslist-area sans" style="margin: 1.2rem 0;">
                 <div class="fontslist-area-list"></div>
-                <div class="fontslist-area-list-appendix serif"></div>
+                <div class="fontslist-area-list-appendix"></div>
             </div>
         </div>
 
-        <div class="big-part">
+        <div class="big-part serif">
             <footer>
                 <p>
                     Copyright &copy; 2023 Neruthes, and other contributors.
