@@ -1,0 +1,10 @@
+id="inter"
+family="Inter"
+cat="sans-humanist"
+about="Inter features a tall x-height to aid in readability of mixed-case and lower-case text."
+infopage="https://github.com/rsms/inter"
+license="OFL"
+
+relay_upstream="Google Fonts"
+css_url="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+minikv="vars=9"

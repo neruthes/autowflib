@@ -1,0 +1,10 @@
+id="dm-serif-display"
+family="DM Serif Display"
+cat="display-serif"
+about="DM Serif Display is a high-contrast transitional face. With delicate serifs and fine detailing, the design has been shaped for use in super-sized poster settings."
+infopage="https://github.com/googlefonts/dm-fonts"
+license="OFL"
+
+relay_upstream="Google Fonts"
+css_url="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap"
+minikv="vars=2"

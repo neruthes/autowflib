@@ -110,6 +110,7 @@ function src_build() {
         if [[ ! -e "$woff2_download_path" ]]; then
             log INFO wget --header="User-Agent: $http_user_agent_str" "$woff2_url" -O "$woff2_download_path"
             wget --header="User-Agent: $http_user_agent_str" "$woff2_url" -O "$woff2_download_path"
+            sleep 1
         fi
     done
 }

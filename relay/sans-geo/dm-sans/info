@@ -1,0 +1,10 @@
+id="dm-sans"
+family="DM Sans"
+cat="sans-geo"
+about="DM Sans is a low-contrast geometric sans-serif design, intended for use at smaller text sizes."
+infopage="https://github.com/googlefonts/dm-fonts"
+license="OFL"
+
+relay_upstream="Google Fonts"
+css_url="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+minikv="vars=6"

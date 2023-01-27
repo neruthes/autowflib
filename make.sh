@@ -128,11 +128,13 @@ case $1 in
         ### Smartly upload
         last_push_time="$(db_find "$1")"
         file_change_time="$(date -r "$1" +%s)"
-        if [[ "$last_push_time" -gt "$file_change_time" ]] && [[ "$FORCE_UPLOAD" != y ]]; then
-            delta_sec=$((last_push_time-file_change_time))
-            delta_min=$((delta_sec/60))
-            echo "[INFO] The file '$1' was already uploaded ($delta_min min after change). Set FORCE_UPLOAD=y to ignore date."
-            exit 0
+        if [[ "$FORCE_UPLOAD" != y ]]; then
+            if [[ "$last_push_time" -gt "$file_change_time" ]] && [[ $last_push_time -gt 10000 ]]; then
+                delta_sec=$((last_push_time-file_change_time))
+                delta_min=$((delta_sec/60))
+                echo "[INFO] The file '$1' was already uploaded ($(date --date=@$last_push_time '+%F'), $delta_min min after change). Set FORCE_UPLOAD=y to ignore date."
+                exit 0
+            fi
         fi
         smallfn="$(cut -d/ -f2- <<< "$1")"
         wrangler r2 object put "autowflibcdn/$smallfn" --file "$1" && db_insert "$1"

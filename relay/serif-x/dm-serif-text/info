@@ -1,0 +1,10 @@
+id="dm-serif-text"
+family="DM Serif Text"
+cat="serif-x"
+about="DM Serif Text is a lower-contrast counterpart to the high-contrast DM Serif Display."
+infopage="https://github.com/googlefonts/dm-fonts"
+license="OFL"
+
+relay_upstream="Google Fonts"
+css_url="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap"
+minikv="vars=2"
