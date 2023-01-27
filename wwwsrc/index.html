@@ -233,12 +233,12 @@
                     >
                         <div class="fontInfoCard--inner">
                             <div style="${({
-                            fonts: `background: url('./fontname-thumbnail/${data.id[0]}/${data.id}.png') left center no-repeat scroll; background-size: auto 80%;`,
-                            relay: ''
+                            'fonts': `background: url('./fontname-thumbnail/${data.id[0]}/${data.id}.png') left center no-repeat scroll; background-size: auto 80%;`,
+                            'fonts-relay': ''
                         })[data.minikv.type]}"
                                 class="fontInfoCard--toparea"
                             >
-                                <span class="fontInfoCard--family" style="${data.minikv.type === 'relay' ? `color: inherit; font-family: ${data.family};` : ''}">${data.family}</span>
+                                <span class="fontInfoCard--family" style="${data.minikv.type === 'fonts-relay' ? `color: inherit; font-family: ${data.family};` : ''}">${data.family}</span>
                             </div>
                             <div class="fontInfoCard--midarea">
                                 <div class="fontInfoCard--variants">${data.minikv.vars || data.list.length} variants</div>
@@ -251,7 +251,7 @@
                                 <a target="_blank" href="./preview/?id=${data.id}&family=${encodeURIComponent(data.family)}">Preview</a>
                                 &nbsp;&nbsp;&nbsp;
                                 <a target="_blank" href="https://github.com/neruthes/autowflib/blob/master/fonts/${data.category}/${data.id}/info">Definition</a>
-                                ${data.minikv.type === 'relay' ? '&nbsp;&nbsp;&nbsp;<span style="opacity: 0.5;">(Relayed)</span>' : ''}
+                                ${data.minikv.type === 'fonts-relay' ? '&nbsp;&nbsp;&nbsp;<span style="opacity: 0.5;">(Relayed)</span>' : ''}
                             </div>
                         </div>
                     </div>`;

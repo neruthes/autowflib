@@ -1,0 +1,19 @@
+id="nimbus-roman"
+family="Nimbus Roman"
+cat="serif-trans"
+about="The Nimbus 2015 Core fonts added Greek and Cyrillic glyphs."
+infopage="https://www.ctan.org/tex-archive/fonts/nimbus15"
+license="LPPL"
+
+download="https://mirrors.bfsu.edu.cn/ctan/fonts/nimbus15.zip"
+format="zip"
+sha256="f5ad14f48d9577f6617952b1f12d80461f995155cf1d77d443a370043e9c246e"
+
+convert_from="otf"
+
+weight_map="
+400:ztm-Reg
+400i:ztm-RegIta
+600:ztm-Med
+600i:ztm-MedIta
+"

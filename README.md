@@ -21,7 +21,7 @@ CSS/WOFF2 artifacts are served over Cloudflare CDN and hosted on Cloudflare Page
 
 The font being submitted for inclusion in this repository must satisfy the following criteria:
 
-- It is published with GPL, OFL, MIT, or some similar license (permitting unlimited web embedding).
+- It is published with [GNU GPL 2.0](https://www.gnu.org/licenses/old-licenses/gpl-2.0.html), [GNU GPL 3.0](https://www.gnu.org/licenses/gpl-3.0.html), [OFL](https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=ofl), [GFL](https://www.ctan.org/license/gfl), [MIT](https://en.wikipedia.org/wiki/MIT_License), [LPPL](https://www.ctan.org/license/lppl1.3), or some similar license (permitting unlimited web embedding).
 - If it is a fork of another open source font, it is differentiated enough from its upstream, or has at least some basic popularity (e.g. 100 stars on GitHub).
 - If the submission to this library is not made by the font creator/maintainer themselves:
   - The font should have some basic popularity.

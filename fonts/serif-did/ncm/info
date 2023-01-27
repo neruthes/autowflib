@@ -1,0 +1,20 @@
+id="ncm"
+family="NewComputerModern"
+cat="serif-did"
+about="New assembly of Computer Modern fonts including extensions in many directions for both Latin based languages, non-Latin based languages and Mathematics, all compatible in style to CM fonts."
+infopage="https://www.ctan.org/tex-archive/fonts/newcomputermodern"
+license="GFL"
+
+download="https://ctan.math.illinois.edu/fonts/newcomputermodern.zip"
+format="zip"
+sha256="579ba9155c99fd7b1f61ed4f479dd6d62a4b2a02b359c659f72cac4a68b5476d"
+
+convert_from="otf"
+
+weight_map="
+400:NewCM10-Regular
+400i:NewCM10-Italic
+600:NewCM10-Bold
+600i:NewCM10-BoldItalic
+"
+

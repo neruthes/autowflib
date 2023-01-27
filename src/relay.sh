@@ -31,7 +31,7 @@
 export REPODIR="$PWD"
 export TARGET_ID="$(dirname "$1")/$(basename "$1")"     # E.g. 'fonts/serif-trans/c059'
 
-export workdir="workdir/${TARGET_ID/relay/fonts}"
+export workdir="workdir/${TARGET_ID/fonts-relay/fonts}"
 
 echo "**  debug:  TARGET_ID=$TARGET_ID"
 echo "**  debug:  workdir=$workdir"
@@ -124,7 +124,7 @@ function webfont_collect() {
 }
 
 function artifacts_install() {
-    distdir="distdir/${TARGET_ID/relay/fonts}"
+    distdir="distdir/${TARGET_ID/fonts-relay/fonts}"
 
     ### Clean old files in distdir
     find "$distdir" -mindepth 1 -delete

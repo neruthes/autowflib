@@ -1,24 +1,24 @@
-@family|abril-fatface|Abril Fatface|display-serif|vars=1&type=relay
+@family|abril-fatface|Abril Fatface|display-serif|vars=1&type=fonts-relay
 @list|41773947bfc3e98f.woff2|dd40374e9c14ca96.woff2
 @family|brygada-1918|Brygada 1918|serif-x|type=fonts
 @list|Brygada1918-Bold.woff2|Brygada1918-BoldItalic.woff2|Brygada1918-Italic.woff2|Brygada1918-Medium.woff2|Brygada1918-MediumItalic.woff2|Brygada1918-Regular.woff2|Brygada1918-SemiBold.woff2|Brygada1918-SemiBoldItalic.woff2
 @family|c059|C059|serif-trans|type=fonts
 @list|C059-BdIta.woff2|C059-Bold.woff2|C059-Italic.woff2|C059-Roman.woff2
-@family|crimson-text|Crimson Text|serif-old|vars=6&type=relay
+@family|crimson-text|Crimson Text|serif-old|vars=6&type=fonts-relay
 @list|01c9d03694463859.woff2|023015097ca7751c.woff2|05c7f644f93caa08.woff2|0aa5b4544f234804.woff2|17124e85f32aab19.woff2|2386932f95fb33c7.woff2|402fb087b52e44cd.woff2|4c24fe6d37aa0381.woff2|5d4dbed827f1940b.woff2|65bdadcb06894a88.woff2|671c2f3d4d890c1d.woff2|70173f000fd5d541.woff2|81fbc510cb2f983b.woff2|8e5f37d601e4c90e.woff2|b918e9d5b2af78eb.woff2|ce8c850cd8e2b0a5.woff2|eee5fb7252454dcf.woff2|ef9f088ff4fc06b1.woff2
-@family|dm-sans|DM Sans|sans-geo|vars=6&type=relay
+@family|dm-sans|DM Sans|sans-geo|vars=6&type=fonts-relay
 @list|291ac4c13f3eac12.woff2|34ac9832dd033bc5.woff2|685471befecc0b24.woff2|7e884bb9b7aebb8c.woff2|7ffc4ef31e312083.woff2|847e97cd12cbedf9.woff2|a2984652c7ee87aa.woff2|c2a59bd33dd92fcc.woff2|ca42fa3bf5e15f99.woff2|d544da8a951eec53.woff2|e7afa10c7808de80.woff2|fcd37fb7f954c043.woff2
-@family|dm-serif-display|DM Serif Display|display-serif|vars=2&type=relay
+@family|dm-serif-display|DM Serif Display|display-serif|vars=2&type=fonts-relay
 @list|2826c707274d1a3a.woff2|717e2d4020bea847.woff2|83e3c7f465e0e23c.woff2|bb7e82f13f540907.woff2
-@family|dm-serif-text|DM Serif Text|serif-x|vars=2&type=relay
+@family|dm-serif-text|DM Serif Text|serif-x|vars=2&type=fonts-relay
 @list|00870456ca66e2b6.woff2|05c6dc0a9ddfc511.woff2|17277afa3595f7d0.woff2|2a96f4c202ef87fe.woff2
 @family|elite-math|Elite Math|mono-type|type=fonts
 @list|EliteMath-New.woff2|EliteMath-Wide.woff2
-@family|ibm-plex-sans|IBM Plex Sans|sans-humanist|vars=14&type=relay
+@family|ibm-plex-sans|IBM Plex Sans|sans-humanist|vars=14&type=fonts-relay
 @list|01257e4d8b6ebc65.woff2|0314c44c0e31964f.woff2|041a6a75d4cbaa07.woff2|064add5ab4399e96.woff2|08c0ec5bd851dead.woff2|0c40183328c6c63d.woff2|0e5c7e4bb6af6af7.woff2|107814663efcd7c5.woff2|1135c85a97063dd9.woff2|1f6dd51e5c21b53d.woff2|2dd1845d854e28c6.woff2|302deacda919d510.woff2|31ce2c43327d9bbd.woff2|36b0f1b4d80320f5.woff2|36ed6751908970f0.woff2|37d8900896dda03c.woff2|3d5a851648860999.woff2|4091a906dbbd0596.woff2|4135b14182c6aba6.woff2|445b535aded367ce.woff2|4e4cc22d15156a66.woff2|595f775f1fb89801.woff2|5b814221a8a58ba6.woff2|62db6859dcd63e9c.woff2|64f8ca6ecb2bad0d.woff2|69aefdb69f21593d.woff2|69c752e9088190d8.woff2|6bec1ca2dcc1a326.woff2|6ce35b9dccdaf0fe.woff2|6ea4c2e46ec2d130.woff2|70cda2a6377fa6c2.woff2|7237fa5ec680c7f9.woff2|725be961d4e88d09.woff2|738eaf77bdca4737.woff2|7807cfac6b46b7c3.woff2|797146a1a51e0f5d.woff2|7c0e96e0b6893dc8.woff2|814e1b775662b328.woff2|8beede32ef8fc58a.woff2|8d613e9d6fa8a40b.woff2|8dba84d8b7b0db6a.woff2|942942cf0e7fa901.woff2|96c28d26bbccea16.woff2|98505bfeccc45d34.woff2|98f0d17487d8ac44.woff2|9c33fe7d0f252afd.woff2|a0fa4fede6164440.woff2|a21952f98061e43c.woff2|a495281fce779507.woff2|a91d8d9e9e24ea4c.woff2|ac1eab055a994819.woff2|af01de35829b6d2e.woff2|af77872bc974dcdd.woff2|b19f4b38321c3b1e.woff2|b2d96bb52e85d5ab.woff2|b6646f34563fa81f.woff2|c0eb8f21186e3880.woff2|c2074cc4eaaa3883.woff2|c29c75df66f037d2.woff2|c661f8cbbdb09c3d.woff2|c68be4f98934b78f.woff2|c6c4478ce60964bb.woff2|d1a1085ea1acd5b6.woff2|d434c375c63c85df.woff2|d4789c4e6a7002fc.woff2|d6836a0eedb043b3.woff2|d6fe5726bb745b9a.woff2|d832146611d27aae.woff2|dc060d3e6796cefe.woff2|df34ec9ff2d85af2.woff2|e32a6c16e000a3a2.woff2|e3a371c8aad931bf.woff2|e9240cacb63457df.woff2|ea77b7cc2337b214.woff2|ebecba886ebd10d0.woff2|eccba114fb5292de.woff2|f0ec8aa73c2e3c1a.woff2|f50956c7be12f1f6.woff2|f5486b13a7c9e1d9.woff2|f6d47a26a19c7d34.woff2|fb67f0d8c25d5670.woff2|fbd417527221d93d.woff2|fc5528bfb901e906.woff2|ff100676cd73f85b.woff2
-@family|inconsolata|Inconsolata|mono-code|vars=8&type=relay
+@family|inconsolata|Inconsolata|mono-code|vars=8&type=fonts-relay
 @list|03855a64c5c8c718.woff2|66290982297b5df9.woff2|9fc1203af1422c2e.woff2
-@family|inter|Inter|sans-humanist|vars=9&type=relay
+@family|inter|Inter|sans-humanist|vars=9&type=fonts-relay
 @list|1307ad6c168d1334.woff2|52b4f226025811a0.woff2|6ad8e93d02dd99ad.woff2|a6bc5a24f7594312.woff2|bbef99dcd15352b2.woff2|be2425b7198ea1ad.woff2|ff0273f1d5eaca11.woff2
 @family|libertinus-serif|Libertinus Serif|serif-trans|type=fonts
 @list|LibertinusSerif-Bold.woff2|LibertinusSerif-BoldItalic.woff2|LibertinusSerif-Italic.woff2|LibertinusSerif-Regular.woff2|LibertinusSerif-Semibold.woff2|LibertinusSerif-SemiboldItalic.woff2
@@ -26,9 +26,15 @@
 @list|Lucette-Regular.woff2|Lucette-Regularitalic.woff2
 @family|nacelle|Nacelle|sans-grot|type=fonts
 @list|Nacelle-Black.woff2|Nacelle-BlackItalic.woff2|Nacelle-Bold.woff2|Nacelle-BoldItalic.woff2|Nacelle-Heavy.woff2|Nacelle-HeavyItalic.woff2|Nacelle-Italic.woff2|Nacelle-Light.woff2|Nacelle-LightItalic.woff2|Nacelle-Regular.woff2|Nacelle-SemiBold.woff2|Nacelle-SemiBoldItalic.woff2|Nacelle-Thin.woff2|Nacelle-ThinItalic.woff2|Nacelle-UltraLight.woff2|Nacelle-UltraLightItalic.woff2
+@family|ncm|NewComputerModern|serif-did|type=fonts
+@list|NewCM10-Bold.woff2|NewCM10-BoldItalic.woff2|NewCM10-Italic.woff2|NewCM10-Regular.woff2
 @family|new-heterodox-mono|New Heterodox Mono|mono-serif|type=fonts
 @list|NewHeterodoxMono-Bold.woff2|NewHeterodoxMono-Book.woff2
-@family|playfair-display|Playfair Display|serif-trans|vars=12&type=relay
+@family|nimbus-roman|Nimbus Roman|serif-trans|type=fonts
+@list|ztm-Med.woff2|ztm-MedIta.woff2|ztm-Reg.woff2|ztm-RegIta.woff2
+@family|nimbus-sans|Nimbus Sans|sans-grot|type=fonts
+@list|zhv-Bol.woff2|zhv-BolIta.woff2|zhv-Reg.woff2|zhv-RegIta.woff2
+@family|playfair-display|Playfair Display|serif-trans|vars=12&type=fonts-relay
 @list|0c16173f24894968.woff2|155e4349868fcae9.woff2|2a597d742000d694.woff2|51d9d2eb11f849e3.woff2|896a85bd4f5329b1.woff2|a21d7de3ea539cae.woff2|a2aaec7241a08f47.woff2|e2054b157481c3f3.woff2
 @family|smiley-sans|Smiley Sans|sans-cjk|type=fonts
 @list|SmileySans-Oblique.woff2

@@ -36,7 +36,7 @@ case $1 in
             id="$id" bash $0 thumbnail
         fi
         ;;
-    relay/*)
+    fonts-relay/*)
         if [[ -e $1/info ]]; then
             id="$(basename $1)"
             TARGET_ID="$(dirname $1)/$id"

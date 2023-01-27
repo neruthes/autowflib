@@ -3,5 +3,6 @@ mono-serif
 mono-type
 sans-cjk
 sans-grot
+serif-did
 serif-trans
 serif-x
