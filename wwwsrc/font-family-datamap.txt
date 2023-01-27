@@ -1,3 +1,5 @@
+@family|abril-fatface|Abril Fatface|display-serif|vars=1&type=relay
+@list|41773947bfc3e98f.woff2|dd40374e9c14ca96.woff2
 @family|brygada-1918|Brygada 1918|serif-x|type=fonts
 @list|Brygada1918-Bold.woff2|Brygada1918-BoldItalic.woff2|Brygada1918-Italic.woff2|Brygada1918-Medium.woff2|Brygada1918-MediumItalic.woff2|Brygada1918-Regular.woff2|Brygada1918-SemiBold.woff2|Brygada1918-SemiBoldItalic.woff2
 @family|c059|C059|serif-trans|type=fonts
