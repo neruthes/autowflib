@@ -1,0 +1,10 @@
+id="courier-prime"
+family="Courier Prime"
+cat="mono-type"
+about="Courier Prime is a new take on IBM's Courier which was designed in 1956 by Howard Kettler."
+infopage="https://github.com/quoteunquoteapps/CourierPrime"
+license="OFL"
+
+relay_upstream="Google Fonts"
+css_url="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+minikv="vars=4"

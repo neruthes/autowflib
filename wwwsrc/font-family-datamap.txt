@@ -4,6 +4,8 @@
 @list|Brygada1918-Bold.woff2|Brygada1918-BoldItalic.woff2|Brygada1918-Italic.woff2|Brygada1918-Medium.woff2|Brygada1918-MediumItalic.woff2|Brygada1918-Regular.woff2|Brygada1918-SemiBold.woff2|Brygada1918-SemiBoldItalic.woff2
 @family|c059|C059|serif-trans|type=fonts
 @list|C059-BdIta.woff2|C059-Bold.woff2|C059-Italic.woff2|C059-Roman.woff2
+@family|courier-prime|Courier Prime|mono-type|vars=4&type=fonts-relay
+@list|21d000b08659623d.woff2|2c5d5f321fdd0043.woff2|5717e11d40d13539.woff2|57d1a8e81812fbbc.woff2|59822ddab0e321c9.woff2|b3c837e0ad270d57.woff2|c1265d5ee4e7cfc9.woff2|fac8e524be78e54a.woff2
 @family|crimson-text|Crimson Text|serif-old|vars=6&type=fonts-relay
 @list|01c9d03694463859.woff2|023015097ca7751c.woff2|05c7f644f93caa08.woff2|0aa5b4544f234804.woff2|17124e85f32aab19.woff2|2386932f95fb33c7.woff2|402fb087b52e44cd.woff2|4c24fe6d37aa0381.woff2|5d4dbed827f1940b.woff2|65bdadcb06894a88.woff2|671c2f3d4d890c1d.woff2|70173f000fd5d541.woff2|81fbc510cb2f983b.woff2|8e5f37d601e4c90e.woff2|b918e9d5b2af78eb.woff2|ce8c850cd8e2b0a5.woff2|eee5fb7252454dcf.woff2|ef9f088ff4fc06b1.woff2
 @family|dm-sans|DM Sans|sans-geo|vars=6&type=fonts-relay
@@ -20,6 +22,8 @@
 @list|03855a64c5c8c718.woff2|66290982297b5df9.woff2|9fc1203af1422c2e.woff2
 @family|inter|Inter|sans-humanist|vars=9&type=fonts-relay
 @list|1307ad6c168d1334.woff2|52b4f226025811a0.woff2|6ad8e93d02dd99ad.woff2|a6bc5a24f7594312.woff2|bbef99dcd15352b2.woff2|be2425b7198ea1ad.woff2|ff0273f1d5eaca11.woff2
+@family|jetbrains-mono|JetBrains Mono|mono-code|type=fonts
+@list|JetBrainsMono-Bold.woff2|JetBrainsMono-BoldItalic.woff2|JetBrainsMono-ExtraBold.woff2|JetBrainsMono-ExtraBoldItalic.woff2|JetBrainsMono-ExtraLight.woff2|JetBrainsMono-ExtraLightItalic.woff2|JetBrainsMono-Italic.woff2|JetBrainsMono-Light.woff2|JetBrainsMono-LightItalic.woff2|JetBrainsMono-Medium.woff2|JetBrainsMono-MediumItalic.woff2|JetBrainsMono-Regular.woff2|JetBrainsMono-SemiBold.woff2|JetBrainsMono-SemiBoldItalic.woff2|JetBrainsMono-Thin.woff2|JetBrainsMono-ThinItalic.woff2
 @family|libertinus-serif|Libertinus Serif|serif-trans|type=fonts
 @list|LibertinusSerif-Bold.woff2|LibertinusSerif-BoldItalic.woff2|LibertinusSerif-Italic.woff2|LibertinusSerif-Regular.woff2|LibertinusSerif-Semibold.woff2|LibertinusSerif-SemiboldItalic.woff2
 @family|lucette|Lucette|serif-trans|type=fonts

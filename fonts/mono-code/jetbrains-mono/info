@@ -1,0 +1,31 @@
+id="jetbrains-mono"
+family="JetBrains Mono"
+cat="mono-code"
+about="JetBrains Mono is a typeface made for the specific needs of developers."
+infopage="https://github.com/JetBrains/JetBrainsMono"
+license="OFL"
+
+download="https://github.com/JetBrains/JetBrainsMono/releases/download/v2.304/JetBrainsMono-2.304.zip"
+format="zip"
+sha256="6f6376c6ed2960ea8a963cd7387ec9d76e3f629125bc33d1fdcd7eb7012f7bbf"
+
+convert_from="skip"
+
+weight_map="
+100:JetBrainsMono-ExtraLight
+100i:JetBrainsMono-ExtraLightItalic
+200:JetBrainsMono-Thin
+200i:JetBrainsMono-ThinItalic
+300:JetBrainsMono-Light
+300i:JetBrainsMono-LightItalic
+400:JetBrainsMono-Regular
+400i:JetBrainsMono-Italic
+500:JetBrainsMono-Medium
+500i:JetBrainsMono-MediumItalic
+600:JetBrainsMono-SemiBold
+600i:JetBrainsMono-SemiBoldItalic
+700:JetBrainsMono-Bold
+700i:JetBrainsMono-BoldItalic
+800:JetBrainsMono-ExtraBold
+800i:JetBrainsMono-ExtraBoldItalic
+"

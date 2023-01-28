@@ -12,11 +12,11 @@
     <style>
         #page {
             font-weight: 400;
-            max-width: 900px;
+            max-width: 800px;
             padding: 40px;
             margin: 0 auto;
-            text-align: justify;
         }
+
         strong {
             font-weight: 600;
         }
@@ -25,6 +25,31 @@
     <style id="preview-css">
 
     </style>
+    <script>
+        const cssTag = document.querySelector('#preview-css');
+        const params = {};
+        if (location.search.length > 4) {
+            location.search.slice(1).split('&').forEach(function (kvstr) {
+                const [k, v] = kvstr.split('=');
+                params[k] = v;
+            });
+        };
+        if (params.id && params.family) {
+            let lastResortFont = (function () {
+                if (params.cat.match(/serif/)) {
+                    return 'sans-serif';
+                };
+                if (params.cat.match(/sans/)) {
+                    return 'serif';
+                };
+                return 'serif';
+            })();
+            window.realFamily = decodeURIComponent(params.family);
+            cssTag.innerHTML += `@import url('https://autowflibcdn.pages.dev/${params.cdnid || 'awfl-cdn'}/css/${params.id}.css');`
+            cssTag.innerHTML += `#page { font-family: '${realFamily}', 'Comic Neue', ${lastResortFont}; }`;
+            cssTag.innerHTML += params.cat.indexOf('mono') === -1 ? `#page { text-align: justify; }` : '';
+        };
+    </script>
 </head>
 
 <body>
@@ -106,24 +131,10 @@
             and shall not be subjected to political interpretations.
         </p>
     </div>
-
     <script>
-        const cssTag = document.querySelector('#preview-css');
-        const params = {};
-        if (location.search.length > 4) {
-            location.search.slice(1).split('&').forEach(function (kvstr) {
-                const [k, v] = kvstr.split('=');
-                params[k] = v;
-            });
-        };
-        if (params.id && params.family) {
-            const realFamily = decodeURIComponent(params.family);
-            cssTag.innerHTML += `@import url('https://autowflibcdn.pages.dev/${params.cdnid || 'awfl-cdn'}/css/${params.id}.css');`
-            cssTag.innerHTML += `#page { font-family: '${realFamily}', 'Comic Neue'}`;
-            document.querySelectorAll('.insert-family-name').forEach(function (span) {
-                span.innerHTML = realFamily;
-            });
-        };
+        document.querySelectorAll('.insert-family-name').forEach(function (span) {
+            span.innerHTML = realFamily;
+        });
     </script>
 </body>
 

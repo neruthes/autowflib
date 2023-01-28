@@ -32,6 +32,7 @@
         html,
         body {
             font-size: 5mm;
+            background: #F9F9F9;
             padding: 0rem;
             margin: 0rem;
         }
@@ -83,8 +84,8 @@
             <header class="sans">
                 <h1>AutoWFLib</h1>
                 <p style="font-size: 0.85rem;">
-                    Automated Web Font Library.
-                    Collaborative park for open-source fonts.
+                    Automated Web Font Library.<br>
+                    Collaborative park for open-source fonts.<br>
                     An addition to mainstream web font hosting services.
                 </p>
             </header>
@@ -119,7 +120,8 @@
                     font-weight: 400;
                     font-variant: normal;
                     font-size: 1rem;
-                    border: 1px solid #AAA;
+                    background: #FFF;
+                    border: 1px solid #CCC;
                     border-radius: 0.4rem;
                     margin: 0 0 1.2rem;
                     padding: 1rem 1rem;
@@ -132,7 +134,7 @@
                 }
 
                 .fontInfoCard--toparea {
-                    height: 0.9rem;
+                    height: 1rem;
                 }
 
                 .fontInfoCard--midarea {
@@ -148,6 +150,9 @@
                 .fontInfoCard--family {
                     font-size: 0.8rem;
                     color: rgba(0, 0, 0, 0);
+                    line-height: 1rem;
+                    display: block;
+                    height: 1rem;
                 }
 
                 .fontInfoCard--variants {
@@ -158,7 +163,7 @@
             <div class="search-area sans" style="margin: 1.2rem 0;">
                 <input id="js-mainSearchBox" type="text" placeholder="Search font by name" style="
                     font-size: 0.8rem;
-                    border: 1px solid #AAA;
+                    border: 1px solid #CCC;
                     border-radius: 0.4rem;
                     display: block;
                     width: 100%;
@@ -173,7 +178,6 @@
                     </select>
                 </div>
             </div>
-            <!-- <div style="background: #AAA; height: 1px; margin: 2rem 0;"></div> -->
             <div class="fontslist-area sans" style="margin: 1.2rem 0;">
                 <div class="fontslist-area-list"></div>
                 <div class="fontslist-area-list-appendix"></div>
@@ -248,7 +252,7 @@
                             <div class="fontInfoCard--subarea">
                                 <a target="_blank" href="https://autowflibcdn.pages.dev/awfl-cdn/css/${data.id}.css">CSS Link</a>
                                 &nbsp;&nbsp;&nbsp;
-                                <a target="_blank" href="./preview/?id=${data.id}&family=${encodeURIComponent(data.family)}">Preview</a>
+                                <a target="_blank" href="./preview/?id=${data.id}&family=${encodeURIComponent(data.family)}&cat=${data.category}">Preview</a>
                                 &nbsp;&nbsp;&nbsp;
                                 <a target="_blank" href="https://github.com/neruthes/autowflib/blob/master/fonts/${data.category}/${data.id}/info">Definition</a>
                                 ${data.minikv.type === 'fonts-relay' ? '&nbsp;&nbsp;&nbsp;<span style="opacity: 0.5;">(Relayed)</span>' : ''}
