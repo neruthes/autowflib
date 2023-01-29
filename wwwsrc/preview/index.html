@@ -45,7 +45,9 @@
                 return 'serif';
             })();
             window.realFamily = decodeURIComponent(params.family);
+            cssTag.innerHTML += `@import url('../awfl-cdn/${params.cdnid || 'awfl-cdn'}/css/${params.id}.css');`
             cssTag.innerHTML += `@import url('https://autowflibcdn.pages.dev/${params.cdnid || 'awfl-cdn'}/css/${params.id}.css');`
+            cssTag.innerHTML += `@import url('https://autowflibcdn-r2.neruthes.xyz/${params.cdnid || 'awfl-cdn'}/css/${params.id}.css');`
             cssTag.innerHTML += `#page { font-family: '${realFamily}', 'Comic Neue', ${lastResortFont}; }`;
             cssTag.innerHTML += params.cat.indexOf('mono') === -1 ? `#page { text-align: justify; }` : '';
         };

@@ -1,0 +1,20 @@
+id="gfs-bodoni"
+family="GFS Bodoni"
+cat="serif-did"
+about="A Greek and Latin font based on Bodoni."
+infopage="https://www.ctan.org/tex-archive/fonts/greek/gfs/gfsbodoni"
+license="OFL"
+
+download="https://mirrors.bfsu.edu.cn/ctan/fonts/greek/gfs/gfsbodoni.zip"
+format="zip"
+sha256="630e0722da30acf1bf2da946ef06e8ede9c2231e504502d1410b4754e2daa2ba"
+
+convert_from="otf"
+
+weight_map="
+400:GFSBodoni-Regular
+400i:GFSBodoni-Italic
+600:GFSBodoni-Bold
+600i:GFSBodoni-BoldItalic
+"
+

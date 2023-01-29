@@ -125,7 +125,7 @@ function src_build() {
     case $convert_from in
         skip)
             log INFO "This font does not require any conversion."
-        return 0
+            return 0
             ;;
         otf|ttf)
             IFS=$'\n'

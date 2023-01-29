@@ -26,14 +26,24 @@ function db_insert() {
         VALUES('$fn',$(date +%s)) ON CONFLICT(fn) DO UPDATE SET time=excluded.time;" | sqlite3 wwwextra/r2uploadtime.db
 }
 
+paral="$(which paral)"
 
 case $1 in
+    _all)
+        for TARGET_ID in fonts/*/*; do
+            $paral bash src/fbuild.sh $TARGET_ID
+        done
+        ;;
+    css)
+        for TARGET_ID in fonts/*/*; do
+            $paral bash src/fbuild.sh $TARGET_ID css_generate
+        done
+        ;;
     fonts/*)
         if [[ -e $1/info ]]; then
             id="$(basename $1)"
             TARGET_ID="$(dirname $1)/$id"
-            (bash src/fbuild.sh $TARGET_ID full || exit 1) | tee buildlog.txt
-            id="$id" bash $0 thumbnail
+            ( bash src/fbuild.sh $TARGET_ID full | tee buildlog.txt && id="$id" bash $0 thumbnail )
         fi
         ;;
     fonts-relay/*)
@@ -41,7 +51,6 @@ case $1 in
             id="$(basename $1)"
             TARGET_ID="$(dirname $1)/$id"
             (bash src/relay.sh $TARGET_ID full || exit 1) | tee buildlog.txt
-            # id="$id" bash $0 thumbnail
         fi
         ;;
     thumbnail)
@@ -70,10 +79,10 @@ case $1 in
         ;;
     cdn)
         rsync -av --mkpath distdir/ cdndist/awfl-cdn/
-        wrangler pages publish cdndist --project-name=autowflibcdn --commit-dirty=true --branch=main
         ;;
     cf)
-        wrangler pages publish wwwdist --project-name=autowflib --commit-dirty=true --branch=main
+        wrangler pages publish wwwdist-real --project-name=autowflib --commit-dirty=true --branch=main          # Main website project
+        wrangler pages publish cdndist --project-name=autowflibcdn --commit-dirty=true --branch=main            # Offcial CDN mirror
         ;;
     www_catalog)
         printf ''
@@ -93,18 +102,23 @@ case $1 in
             echo "@list|$(ls distdir/fonts/$cat/$id | grep 'woff2$' | tr '\n' '|')" >> $outfn
         done
         sed -i 's/|$//g' $outfn
-        cat $outfn
+        # cat $outfn
         ;;
     w | wwwdist | wwwdist/)
-        bash $0 www_catalog
-        cat distdir/css/*.css > wwwsrc/full.css
-        rsync -av --delete wwwsrc/ wwwdist/
-        rsync -av wwwextra/ wwwdist/
-        du -xhd2 wwwdist
+        ### 'wwwdist-real': Cloudflare Pages
+        ### 'wwwdist': Local debugging
+        bash $0 www_catalog                                 # Generate data catalog for index page
+        cat distdir/css/*.css > wwwsrc/full.css             # Make the all-in-one CSS
+        rsync -a --delete wwwsrc/ wwwdist/                  # Reset wwwdist by loading wwwsrc
+        rsync -a wwwextra/ wwwdist/                         # Load wwwextra
+        du -xhd2 wwwdist | tail -n1                         # How large is wwwdist now?
         if [[ $USER == neruthes ]]; then
             echo "[INFO] Remember to upload the tarball before pushing to GitHub master:"
             echo "    $  bash $0 cdn cf pkgdist && cfoss pkgdist/wwwdist.tar && u"
         fi
+        rsync -a --mkpath --delete cdndist/awfl-cdn/ wwwdist/awfl-cdn/          # Load CDN dir for debugging
+        rsync -a --mkpath --delete wwwdist/ wwwdist-real/                       # Generate output dir for Cloudflare Pages
+        rm -r wwwdist-real/awfl-cdn/                                            # Remove CDN dir from CF dir
         ;;
     p | pkgdist | pkgdist/)
         cd $REPODIR/wwwdist && tar -cf $REPODIR/pkgdist/wwwdist.tar .

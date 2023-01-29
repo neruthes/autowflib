@@ -1,0 +1,20 @@
+id="baskervillef"
+family="BaskervilleF"
+cat="serif-trans"
+about="BaskervilleF is a fork from the Libre Baskerville fonts (Roman, Italic, Bold only) released under the OFL by Paolo Impallari and Rodrigo Fuenzalida."
+infopage="https://www.ctan.org/tex-archive/fonts/baskervillef/"
+license="OFL"
+
+download="https://mirrors.bfsu.edu.cn/ctan/fonts/baskervillef.zip"
+format="zip"
+sha256="89226ec02917bc513ded88c0fe1c1cf0f0b612051b27ae7c857495d8da3dbb0b"
+
+convert_from="otf"
+
+weight_map="
+400:BaskervilleF-Regular
+400i:BaskervilleF-Italic
+600:BaskervilleF-Bold
+600i:BaskervilleF-BoldItalic
+"
+
