@@ -1,0 +1,20 @@
+id="xcharter"
+family="XCharter"
+cat="serif-trans"
+about="Redistributable Charter donated by Bitstream with permissive license."
+infopage="https://www.ctan.org/tex-archive/fonts/xcharter/"
+license="LPPL"
+
+download="https://mirrors.bfsu.edu.cn/ctan/fonts/xcharter.zip"
+format="zip"
+sha256="99738c51a1814a76b1a3bfb494c34b321909cf81933eb52c67f8a43d9506a501"
+
+convert_from="otf"
+
+weight_map="
+400:XCharter-Roman
+400i:XCharter-Italic
+600:XCharter-Bold
+600i:XCharter-BoldItalic
+"
+

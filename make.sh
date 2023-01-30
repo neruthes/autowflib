@@ -114,7 +114,7 @@ case $1 in
         du -xhd2 wwwdist | tail -n1                         # How large is wwwdist now?
         if [[ $USER == neruthes ]]; then
             echo "[INFO] Remember to upload the tarball before pushing to GitHub master:"
-            echo "    $  bash $0 cdn cf pkgdist && cfoss pkgdist/wwwdist.tar && u"
+            echo "    $  ./make.sh cdn cf pkgdist && cfoss pkgdist/wwwdist.tar && u"
         fi
         rsync -a --mkpath --delete cdndist/awfl-cdn/ wwwdist/awfl-cdn/          # Load CDN dir for debugging
         rsync -a --mkpath --delete wwwdist/ wwwdist-real/                       # Generate output dir for Cloudflare Pages

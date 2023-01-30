@@ -8,6 +8,8 @@
 @list|Brygada1918-Bold.woff2|Brygada1918-BoldItalic.woff2|Brygada1918-Italic.woff2|Brygada1918-Medium.woff2|Brygada1918-MediumItalic.woff2|Brygada1918-Regular.woff2|Brygada1918-SemiBold.woff2|Brygada1918-SemiBoldItalic.woff2
 @family|c059|C059|serif-trans|type=fonts
 @list|C059-BdIta.woff2|C059-Bold.woff2|C059-Italic.woff2|C059-Roman.woff2
+@family|charis-sil|Charis SIL|serif-trans|type=fonts
+@list|CharisSIL-Bold.woff2|CharisSIL-BoldItalic.woff2|CharisSIL-Italic.woff2|CharisSIL.woff2
 @family|courier-prime|Courier Prime|mono-type|vars=4&type=fonts-relay
 @list|21d000b08659623d.woff2|2c5d5f321fdd0043.woff2|5717e11d40d13539.woff2|57d1a8e81812fbbc.woff2|59822ddab0e321c9.woff2|b3c837e0ad270d57.woff2|c1265d5ee4e7cfc9.woff2|fac8e524be78e54a.woff2
 @family|crimson-text|Crimson Text|serif-old|vars=6&type=fonts-relay
@@ -48,9 +50,13 @@
 @list|0c16173f24894968.woff2|155e4349868fcae9.woff2|2a597d742000d694.woff2|51d9d2eb11f849e3.woff2|896a85bd4f5329b1.woff2|a21d7de3ea539cae.woff2|a2aaec7241a08f47.woff2|e2054b157481c3f3.woff2
 @family|smiley-sans|Smiley Sans|sans-cjk|type=fonts
 @list|SmileySans-Oblique.woff2
+@family|stix-two-text|STIX Two Text|serif-trans|type=fonts
+@list|STIXTwoText-Bold.woff2|STIXTwoText-BoldItalic.woff2|STIXTwoText-Italic.woff2|STIXTwoText-Medium.woff2|STIXTwoText-MediumItalic.woff2|STIXTwoText-Regular.woff2|STIXTwoText-SemiBold.woff2|STIXTwoText-SemiBoldItalic.woff2
 @family|sunday-masthead|Sunday Masthead|display-sans|type=fonts
 @list|SundayMasthead-Regular.woff2
 @family|urw-bookman|URW Bookman|serif-trans|type=fonts
 @list|URWBookman-Demi.woff2|URWBookman-DemiItalic.woff2|URWBookman-Light.woff2|URWBookman-LightItalic.woff2
 @family|x-typewriter|X Typewriter|mono-type|type=fonts
 @list|XTypewriter-Bold.woff2|XTypewriter.woff2
+@family|xcharter|XCharter|serif-trans|type=fonts
+@list|XCharter-Bold.woff2|XCharter-BoldItalic.woff2|XCharter-Italic.woff2|XCharter-Roman.woff2

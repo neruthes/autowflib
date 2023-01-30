@@ -1,0 +1,20 @@
+id="charis-sil"
+family="Charis SIL"
+cat="serif-trans"
+about="The CharisSIL family of fonts are adapted by SIL International from Bitstream Charter."
+infopage="https://software.sil.org/charis/"
+license="OFL"
+
+download="https://mirrors.bfsu.edu.cn/ctan/fonts/charissil.zip"
+format="zip"
+sha256="51513ad5d77954910824feb9d77a37f110eac13d64737c924d9c978d8fe295a3"
+
+convert_from="ttf"
+
+weight_map="
+400:CharisSIL
+400i:CharisSIL-Italic
+600:CharisSIL-Bold
+600i:CharisSIL-BoldItalic
+"
+

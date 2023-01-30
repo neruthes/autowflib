@@ -1,0 +1,24 @@
+id="stix-two-text"
+family="STIX Two Text"
+cat="serif-trans"
+about="STIX (Scientific and Technical Information eXchange) font family is designed for scientific, medical, and technical fields."
+infopage="http://www.stixfonts.org/"
+license="OFL"
+
+download="https://mirrors.bfsu.edu.cn/ctan/fonts/stix2-otf.zip"
+format="zip"
+sha256="4a50d82ae4f1b10ae8b23ce8ad0a636ed6790ffc9ca3647639141b0ca213455f"
+
+convert_from="otf"
+
+weight_map="
+400:STIXTwoText-Regular
+400i:STIXTwoText-Italic
+500:STIXTwoText-Medium
+500i:STIXTwoText-MediumItalic
+600:STIXTwoText-SemiBold
+600i:STIXTwoText-SemiBoldItalic
+700:STIXTwoText-Bold
+700i:STIXTwoText-BoldItalic
+"
+
