@@ -106,7 +106,7 @@ function src_build() {
         truefn="${fn_id}${fn_ext}"
         woff2_download_path="$workdir/build/woff2_files/$truefn"
         serve_path="$(head -n1 <<< "$CDN_PREFIX_LIST" | cut -d' ' -f1)/awfl-cdn/fonts/$cat/$id/$truefn"
-        sed -i "s|('?$woff2_url'?)|('$serve_path')|" "$workdir/build/$id.css"
+        sed -i "s|($woff2_url)|('$serve_path')|" "$workdir/build/$id.css"
         if [[ ! -e "$woff2_download_path" ]]; then
             log INFO wget --header="User-Agent: $http_user_agent_str" "$woff2_url" -O "$woff2_download_path"
             wget --header="User-Agent: $http_user_agent_str" "$woff2_url" -O "$woff2_download_path"

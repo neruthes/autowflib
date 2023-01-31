@@ -1,9 +1,12 @@
 display-sans
+display-serif
 mono-code
 mono-serif
 mono-type
 sans-cjk
 sans-grot
+sans-humanist
 serif-did
+serif-humanist
 serif-trans
 serif-x

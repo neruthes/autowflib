@@ -2,6 +2,8 @@
 @list|41773947bfc3e98f.woff2|dd40374e9c14ca96.woff2
 @family|archivo|Archivo|sans-grot|type=fonts
 @list|Archivo-Black.woff2|Archivo-BlackItalic.woff2|Archivo-Bold.woff2|Archivo-BoldItalic.woff2|Archivo-ExtraBold.woff2|Archivo-ExtraBoldItalic.woff2|Archivo-ExtraLight.woff2|Archivo-ExtraLightItalic.woff2|Archivo-Italic.woff2|Archivo-Light.woff2|Archivo-LightItalic.woff2|Archivo-Medium.woff2|Archivo-MediumItalic.woff2|Archivo-Regular.woff2|Archivo-SemiBold.woff2|Archivo-SemiBoldItalic.woff2|Archivo-Thin.woff2|Archivo-ThinItalic.woff2
+@family|arima|Arima|display-serif|type=fonts
+@list|Arima-Bold.woff2|Arima-ExtraLight.woff2|Arima-Light.woff2|Arima-Medium.woff2|Arima-Regular.woff2|Arima-SemiBold.woff2|Arima-Thin.woff2
 @family|baskervillef|BaskervilleF|serif-trans|type=fonts
 @list|BaskervilleF-Bold.woff2|BaskervilleF-BoldItalic.woff2|BaskervilleF-Italic.woff2|BaskervilleF-Regular.woff2
 @family|brygada-1918|Brygada 1918|serif-x|type=fonts
@@ -24,8 +26,12 @@
 @list|EliteMath-New.woff2|EliteMath-Wide.woff2
 @family|gfs-bodoni|GFS Bodoni|serif-did|type=fonts
 @list|GFSBodoni-Bold.woff2|GFSBodoni-BoldItalic.woff2|GFSBodoni-Italic.woff2|GFSBodoni-Regular.woff2
-@family|ibm-plex-sans|IBM Plex Sans|sans-humanist|vars=14&type=fonts-relay
-@list|01257e4d8b6ebc65.woff2|0314c44c0e31964f.woff2|041a6a75d4cbaa07.woff2|064add5ab4399e96.woff2|08c0ec5bd851dead.woff2|0c40183328c6c63d.woff2|0e5c7e4bb6af6af7.woff2|107814663efcd7c5.woff2|1135c85a97063dd9.woff2|1f6dd51e5c21b53d.woff2|2dd1845d854e28c6.woff2|302deacda919d510.woff2|31ce2c43327d9bbd.woff2|36b0f1b4d80320f5.woff2|36ed6751908970f0.woff2|37d8900896dda03c.woff2|3d5a851648860999.woff2|4091a906dbbd0596.woff2|4135b14182c6aba6.woff2|445b535aded367ce.woff2|4e4cc22d15156a66.woff2|595f775f1fb89801.woff2|5b814221a8a58ba6.woff2|62db6859dcd63e9c.woff2|64f8ca6ecb2bad0d.woff2|69aefdb69f21593d.woff2|69c752e9088190d8.woff2|6bec1ca2dcc1a326.woff2|6ce35b9dccdaf0fe.woff2|6ea4c2e46ec2d130.woff2|70cda2a6377fa6c2.woff2|7237fa5ec680c7f9.woff2|725be961d4e88d09.woff2|738eaf77bdca4737.woff2|7807cfac6b46b7c3.woff2|797146a1a51e0f5d.woff2|7c0e96e0b6893dc8.woff2|814e1b775662b328.woff2|8beede32ef8fc58a.woff2|8d613e9d6fa8a40b.woff2|8dba84d8b7b0db6a.woff2|942942cf0e7fa901.woff2|96c28d26bbccea16.woff2|98505bfeccc45d34.woff2|98f0d17487d8ac44.woff2|9c33fe7d0f252afd.woff2|a0fa4fede6164440.woff2|a21952f98061e43c.woff2|a495281fce779507.woff2|a91d8d9e9e24ea4c.woff2|ac1eab055a994819.woff2|af01de35829b6d2e.woff2|af77872bc974dcdd.woff2|b19f4b38321c3b1e.woff2|b2d96bb52e85d5ab.woff2|b6646f34563fa81f.woff2|c0eb8f21186e3880.woff2|c2074cc4eaaa3883.woff2|c29c75df66f037d2.woff2|c661f8cbbdb09c3d.woff2|c68be4f98934b78f.woff2|c6c4478ce60964bb.woff2|d1a1085ea1acd5b6.woff2|d434c375c63c85df.woff2|d4789c4e6a7002fc.woff2|d6836a0eedb043b3.woff2|d6fe5726bb745b9a.woff2|d832146611d27aae.woff2|dc060d3e6796cefe.woff2|df34ec9ff2d85af2.woff2|e32a6c16e000a3a2.woff2|e3a371c8aad931bf.woff2|e9240cacb63457df.woff2|ea77b7cc2337b214.woff2|ebecba886ebd10d0.woff2|eccba114fb5292de.woff2|f0ec8aa73c2e3c1a.woff2|f50956c7be12f1f6.woff2|f5486b13a7c9e1d9.woff2|f6d47a26a19c7d34.woff2|fb67f0d8c25d5670.woff2|fbd417527221d93d.woff2|fc5528bfb901e906.woff2|ff100676cd73f85b.woff2
+@family|ibm-plex-mono|IBM Plex Mono|mono-code|type=fonts
+@list|IBMPlexMono-Bold.woff2|IBMPlexMono-BoldItalic.woff2|IBMPlexMono-ExtraLight.woff2|IBMPlexMono-ExtraLightItalic.woff2|IBMPlexMono-Italic.woff2|IBMPlexMono-Light.woff2|IBMPlexMono-LightItalic.woff2|IBMPlexMono-Medium.woff2|IBMPlexMono-MediumItalic.woff2|IBMPlexMono-Regular.woff2|IBMPlexMono-SemiBold.woff2|IBMPlexMono-SemiBoldItalic.woff2|IBMPlexMono-Thin.woff2|IBMPlexMono-ThinItalic.woff2
+@family|ibm-plex-sans|IBM Plex Sans|sans-humanist|type=fonts
+@list|IBMPlexSans-Bold.woff2|IBMPlexSans-BoldItalic.woff2|IBMPlexSans-ExtraLight.woff2|IBMPlexSans-ExtraLightItalic.woff2|IBMPlexSans-Italic.woff2|IBMPlexSans-Light.woff2|IBMPlexSans-LightItalic.woff2|IBMPlexSans-Medium.woff2|IBMPlexSans-MediumItalic.woff2|IBMPlexSans-Regular.woff2|IBMPlexSans-SemiBold.woff2|IBMPlexSans-SemiBoldItalic.woff2|IBMPlexSans-Thin.woff2|IBMPlexSans-ThinItalic.woff2
+@family|ibm-plex-serif|IBM Plex Serif|serif-humanist|type=fonts
+@list|IBMPlexSerif-Bold.woff2|IBMPlexSerif-BoldItalic.woff2|IBMPlexSerif-ExtraLight.woff2|IBMPlexSerif-ExtraLightItalic.woff2|IBMPlexSerif-Italic.woff2|IBMPlexSerif-Light.woff2|IBMPlexSerif-LightItalic.woff2|IBMPlexSerif-Medium.woff2|IBMPlexSerif-MediumItalic.woff2|IBMPlexSerif-Regular.woff2|IBMPlexSerif-SemiBold.woff2|IBMPlexSerif-SemiBoldItalic.woff2|IBMPlexSerif-Thin.woff2|IBMPlexSerif-ThinItalic.woff2
 @family|inconsolata|Inconsolata|mono-code|vars=8&type=fonts-relay
 @list|03855a64c5c8c718.woff2|66290982297b5df9.woff2|9fc1203af1422c2e.woff2
 @family|inter|Inter|sans-humanist|vars=9&type=fonts-relay

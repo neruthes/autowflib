@@ -1,0 +1,30 @@
+id="ibm-plex-sans"
+family="IBM Plex Sans"
+cat="sans-humanist"
+about="IBM Plex is an international typeface family designed by Mike Abbink, IBM BX&D, in collaboration with Bold Monday, an independent Dutch type foundry."
+infopage="https://mikeabbink.com/typefaces/ibm-plex-sans/"
+license="OFL"
+
+download="https://fonts.google.com/download?family=IBM%20Plex%20Sans"
+format="zip"
+sha256="0be423d71332608a8ea45064e24590bab4f066fb4dd43f4e1bf8c3c94d6e5527"
+
+convert_from="ttf"
+
+weight_map="
+100:IBMPlexSans-Thin
+100i:IBMPlexSans-ThinItalic
+200:IBMPlexSans-ExtraLight
+200i:IBMPlexSans-ExtraLightItalic
+300:IBMPlexSans-Light
+300i:IBMPlexSans-LightItalic
+400:IBMPlexSans-Regular
+400i:IBMPlexSans-Italic
+500:IBMPlexSans-Medium
+500i:IBMPlexSans-MediumItalic
+600:IBMPlexSans-SemiBold
+600i:IBMPlexSans-SemiBoldItalic
+700:IBMPlexSans-Bold
+700i:IBMPlexSans-BoldItalic
+"
+

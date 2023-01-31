@@ -1,0 +1,23 @@
+id="arima"
+family="Arima"
+cat="display-serif"
+about="A display font with soft edges and calligraphic feel is the main inspiration for Arima project."
+infopage="https://github.com/NDISCOVER/Arima-Font"
+license="OFL"
+
+download="https://fonts.google.com/download?family=Arima"
+format="zip"
+sha256="69a2e055946ce7fd2dbf386d72d799b0840ea720a85367cc6ec2e48bd2438e24"
+
+convert_from="ttf"
+
+weight_map="
+100:Arima-Thin
+200:Arima-ExtraLight
+300:Arima-Light
+400:Arima-Regular
+500:Arima-Medium
+600:Arima-SemiBold
+700:Arima-Bold
+"
+

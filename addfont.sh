@@ -133,9 +133,6 @@ if [[ $USER_LAST_INPUT == y* ]]; then
     echo "$output_file_content" > "$file_path"
     say "Your file is written into '$file_path'. Remember to set the 'weight_map' variable!\n"
     say "Next, you may run './make.sh $file_dir_path' to build for the font."
-    if [[ ! -z "$VSCODE_GIT_ASKPASS_NODE" ]]; then
-        $VSCODE_GIT_ASKPASS_NODE $TARGET_ID/info
-    fi
     find $extract_root -name "*.$f_convert_from"
 fi
 

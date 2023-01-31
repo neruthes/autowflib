@@ -1,0 +1,30 @@
+id="ibm-plex-serif"
+family="IBM Plex Serif"
+cat="serif-humanist"
+about="IBM Plex is an international typeface family designed by Mike Abbink, IBM BX&D, in collaboration with Bold Monday, an independent Dutch type foundry."
+infopage="https://mikeabbink.com/typefaces/ibm-plex-serif/"
+license="OFL"
+
+download="https://fonts.google.com/download?family=IBM%20Plex%20Serif"
+format="zip"
+sha256="5be32d79c1723c819c780bd38048ad1bc89ef228e26426bdeb166d3f7815244d"
+
+convert_from="ttf"
+
+weight_map="
+100:IBMPlexSerif-Thin
+100i:IBMPlexSerif-ThinItalic
+200:IBMPlexSerif-ExtraLight
+200i:IBMPlexSerif-ExtraLightItalic
+300:IBMPlexSerif-Light
+300i:IBMPlexSerif-LightItalic
+400:IBMPlexSerif-Regular
+400i:IBMPlexSerif-Italic
+500:IBMPlexSerif-Medium
+500i:IBMPlexSerif-MediumItalic
+600:IBMPlexSerif-SemiBold
+600i:IBMPlexSerif-SemiBoldItalic
+700:IBMPlexSerif-Bold
+700i:IBMPlexSerif-BoldItalic
+"
+

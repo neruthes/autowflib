@@ -121,7 +121,7 @@ case $1 in
         rm -r wwwdist-real/awfl-cdn/                                            # Remove CDN dir from CF dir
         ;;
     p | pkgdist | pkgdist/)
-        cd $REPODIR/wwwdist && tar -cf $REPODIR/pkgdist/wwwdist.tar .
+        cd $REPODIR/wwwdist-real && tar -cf $REPODIR/pkgdist/wwwdist.tar .
         cd $REPODIR/cdndist && tar --xz -cf $REPODIR/pkgdist/cdn-mirror.tar.xz awfl-cdn
         cd $REPODIR
         tar --xz -cf $REPODIR/pkgdist/definitions.tar.xz $REPODIR/fonts
@@ -146,7 +146,7 @@ case $1 in
             if [[ "$last_push_time" -gt "$file_change_time" ]] && [[ $last_push_time -gt 10000 ]]; then
                 delta_sec=$((last_push_time-file_change_time))
                 delta_min=$((delta_sec/60))
-                echo "[INFO] The file '$1' was already uploaded ($(date --date=@$last_push_time '+%F'), $delta_min min after change). Set FORCE_UPLOAD=y to ignore date."
+                # echo "[INFO] The file '$1' was already uploaded ($(date --date=@$last_push_time '+%F'), $delta_min min after change). Set FORCE_UPLOAD=y to ignore date."
                 exit 0
             fi
         fi
@@ -154,8 +154,9 @@ case $1 in
         wrangler r2 object put "autowflibcdn/$smallfn" --file "$1" && db_insert "$1"
         ;;
     r2)
+        [[ ! -z "$(which paral)" ]] && paral=paral
         for i in $(find cdndist/awfl-cdn -type f); do
-            bash $0 $i
+            $paral bash $0 $i
         done
         ;;
     initdb)

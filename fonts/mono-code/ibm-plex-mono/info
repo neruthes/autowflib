@@ -1,0 +1,30 @@
+id="ibm-plex-mono"
+family="IBM Plex Mono"
+cat="mono-code"
+about="IBM Plex is an international typeface family designed by Mike Abbink, IBM BX&D, in collaboration with Bold Monday, an independent Dutch type foundry."
+infopage="https://mikeabbink.com/typefaces/ibm-plex-mono/"
+license="OFL"
+
+download="https://fonts.google.com/download?family=IBM%20Plex%20Mono"
+format="zip"
+sha256="cde2e28a53ccb0db97bac35ceea891294e156257a79bc87e7d58fcb428c91f85"
+
+convert_from="ttf"
+
+weight_map="
+100:IBMPlexMono-Thin
+100i:IBMPlexMono-ThinItalic
+200:IBMPlexMono-ExtraLight
+200i:IBMPlexMono-ExtraLightItalic
+300:IBMPlexMono-Light
+300i:IBMPlexMono-LightItalic
+400:IBMPlexMono-Regular
+400i:IBMPlexMono-Italic
+500:IBMPlexMono-Medium
+500i:IBMPlexMono-MediumItalic
+600:IBMPlexMono-SemiBold
+600i:IBMPlexMono-SemiBoldItalic
+700:IBMPlexMono-Bold
+700i:IBMPlexMono-BoldItalic
+"
+
