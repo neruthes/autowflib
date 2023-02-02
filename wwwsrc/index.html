@@ -271,7 +271,6 @@
                 if (!forceRun && app.ram.listingCriteriaDirty === false) {
                     return 0;
                 };
-                app.ram.listingCriteriaDirty = false;
                 let evenodd = 0;
                 if (requestSearchTerm.trim().length === 0) {
                     // Reset list view to show all (within the category!)
@@ -305,7 +304,9 @@
                     document.querySelector('.fontslist-area-list-appendix').innerHTML = `No match found :(`;
                 } else {
                     document.querySelector('.fontslist-area-list-appendix').innerHTML = ``;
-                }
+                };
+                // At last, remove the dirty mark
+                app.ram.listingCriteriaDirty = false;
             };
             document.querySelector('#js-mainSearchBox').value = '';
             document.querySelector('#js-mainSearchBox').addEventListener('input', app.searchBoxInputEventHandler);
