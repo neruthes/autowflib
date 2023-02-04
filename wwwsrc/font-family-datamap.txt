@@ -22,6 +22,8 @@
 @list|2826c707274d1a3a.woff2|717e2d4020bea847.woff2|83e3c7f465e0e23c.woff2|bb7e82f13f540907.woff2
 @family|dm-serif-text|DM Serif Text|serif-x|vars=2&type=fonts-relay
 @list|00870456ca66e2b6.woff2|05c6dc0a9ddfc511.woff2|17277afa3595f7d0.woff2|2a96f4c202ef87fe.woff2
+@family|eb-garamond|EB Garamond|serif-humanist|type=fonts
+@list|EBGaramond-Bold.woff2|EBGaramond-BoldItalic.woff2|EBGaramond-ExtraBold.woff2|EBGaramond-ExtraBoldItalic.woff2|EBGaramond-Italic.woff2|EBGaramond-Medium.woff2|EBGaramond-MediumItalic.woff2|EBGaramond-Regular.woff2|EBGaramond-SemiBold.woff2|EBGaramond-SemiBoldItalic.woff2
 @family|elite-math|Elite Math|mono-type|type=fonts
 @list|EliteMath-New.woff2|EliteMath-Wide.woff2
 @family|gfs-bodoni|GFS Bodoni|serif-did|type=fonts
@@ -40,6 +42,8 @@
 @list|JetBrainsMono-Bold.woff2|JetBrainsMono-BoldItalic.woff2|JetBrainsMono-ExtraBold.woff2|JetBrainsMono-ExtraBoldItalic.woff2|JetBrainsMono-ExtraLight.woff2|JetBrainsMono-ExtraLightItalic.woff2|JetBrainsMono-Italic.woff2|JetBrainsMono-Light.woff2|JetBrainsMono-LightItalic.woff2|JetBrainsMono-Medium.woff2|JetBrainsMono-MediumItalic.woff2|JetBrainsMono-Regular.woff2|JetBrainsMono-SemiBold.woff2|JetBrainsMono-SemiBoldItalic.woff2|JetBrainsMono-Thin.woff2|JetBrainsMono-ThinItalic.woff2
 @family|libertinus-serif|Libertinus Serif|serif-trans|type=fonts
 @list|LibertinusSerif-Bold.woff2|LibertinusSerif-BoldItalic.woff2|LibertinusSerif-Italic.woff2|LibertinusSerif-Regular.woff2|LibertinusSerif-Semibold.woff2|LibertinusSerif-SemiboldItalic.woff2
+@family|lora|Lora|serif-trans|type=fonts
+@list|Lora-Bold.woff2|Lora-BoldItalic.woff2|Lora-Italic.woff2|Lora-Medium.woff2|Lora-MediumItalic.woff2|Lora-Regular.woff2|Lora-SemiBold.woff2|Lora-SemiBoldItalic.woff2
 @family|lucette|Lucette|serif-trans|type=fonts
 @list|Lucette-Regular.woff2|Lucette-Regularitalic.woff2
 @family|nacelle|Nacelle|sans-grot|type=fonts
@@ -54,8 +58,16 @@
 @list|zhv-Bol.woff2|zhv-BolIta.woff2|zhv-Reg.woff2|zhv-RegIta.woff2
 @family|playfair-display|Playfair Display|serif-trans|vars=12&type=fonts-relay
 @list|0c16173f24894968.woff2|155e4349868fcae9.woff2|2a597d742000d694.woff2|51d9d2eb11f849e3.woff2|896a85bd4f5329b1.woff2|a21d7de3ea539cae.woff2|a2aaec7241a08f47.woff2|e2054b157481c3f3.woff2
+@family|quicksand|Quicksand|display-sans|type=fonts
+@list|Quicksand-Bold.woff2|Quicksand-Light.woff2|Quicksand-Medium.woff2|Quicksand-Regular.woff2|Quicksand-SemiBold.woff2
+@family|roboto-mono|Roboto Mono|mono-code|type=fonts
+@list|RobotoMono-Bold.woff2|RobotoMono-BoldItalic.woff2|RobotoMono-ExtraLight.woff2|RobotoMono-ExtraLightItalic.woff2|RobotoMono-Italic.woff2|RobotoMono-Light.woff2|RobotoMono-LightItalic.woff2|RobotoMono-Medium.woff2|RobotoMono-MediumItalic.woff2|RobotoMono-Regular.woff2|RobotoMono-SemiBold.woff2|RobotoMono-SemiBoldItalic.woff2|RobotoMono-Thin.woff2|RobotoMono-ThinItalic.woff2
 @family|smiley-sans|Smiley Sans|sans-cjk|type=fonts
 @list|SmileySans-Oblique.woff2
+@family|source-sans-pro|Source Sans Pro|sans-humanist|type=fonts
+@list|SourceSansPro-Black.woff2|SourceSansPro-BlackItalic.woff2|SourceSansPro-Bold.woff2|SourceSansPro-BoldItalic.woff2|SourceSansPro-ExtraLight.woff2|SourceSansPro-ExtraLightItalic.woff2|SourceSansPro-Italic.woff2|SourceSansPro-Light.woff2|SourceSansPro-LightItalic.woff2|SourceSansPro-Regular.woff2|SourceSansPro-SemiBold.woff2|SourceSansPro-SemiBoldItalic.woff2
+@family|source-serif-pro|Source Serif Pro|serif-trans|type=fonts
+@list|SourceSerif4-Black.woff2|SourceSerif4-BlackIt.woff2|SourceSerif4-Bold.woff2|SourceSerif4-BoldIt.woff2|SourceSerif4-ExtraLight.woff2|SourceSerif4-ExtraLightIt.woff2|SourceSerif4-It.woff2|SourceSerif4-Light.woff2|SourceSerif4-LightIt.woff2|SourceSerif4-Regular.woff2|SourceSerif4-Semibold.woff2|SourceSerif4-SemiboldIt.woff2
 @family|stix-two-text|STIX Two Text|serif-trans|type=fonts
 @list|STIXTwoText-Bold.woff2|STIXTwoText-BoldItalic.woff2|STIXTwoText-Italic.woff2|STIXTwoText-Medium.woff2|STIXTwoText-MediumItalic.woff2|STIXTwoText-Regular.woff2|STIXTwoText-SemiBold.woff2|STIXTwoText-SemiBoldItalic.woff2
 @family|sunday-masthead|Sunday Masthead|display-sans|type=fonts

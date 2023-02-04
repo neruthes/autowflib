@@ -1,5 +1,11 @@
 #!/bin/bash
 
+if [[ $USER == neruthes ]]; then
+    source "/home/neruthes/.bashrc"
+    s5pon h
+fi
+
+
 REPODIR="$PWD"
 
 
@@ -8,7 +14,7 @@ USER_LAST_INPUT=""
 
 function say() {
     printf '\n'
-    echo -e -n "WIZARD:  $@"
+    echo -e -n "WIZARD:  $*"
 }
 
 
@@ -132,8 +138,8 @@ if [[ $USER_LAST_INPUT == y* ]]; then
     file_path="$file_dir_path/info"
     echo "$output_file_content" > "$file_path"
     say "Your file is written into '$file_path'. Remember to set the 'weight_map' variable!\n"
-    say "Next, you may run './make.sh $file_dir_path' to build for the font."
-    find $extract_root -name "*.$f_convert_from"
+    say "Next, you may run './make.sh $file_dir_path' to build for the font.\n"
+    find "$extract_root" -name "*.$f_convert_from" | sort | cut -d/ -f4-
 fi
 
 
@@ -147,8 +153,9 @@ exit 0
 
 
 
-
+### -------------------------------------------------------
 ### Debugging
+### -------------------------------------------------------
 echo "y
 Math Elite
 y

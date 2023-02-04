@@ -1,0 +1,24 @@
+id="lora"
+family="Lora"
+cat="serif-trans"
+about="Lora is a well-balanced contemporary serif with roots in calligraphy. It is a text typeface with moderate contrast well suited for body text."
+infopage="https://github.com/cyrealtype/Lora-Cyrillic"
+license="OFL"
+
+download="https://github.com/cyrealtype/Lora-Cyrillic/releases/download/v3.005/Lora-v3.005.zip"
+format="zip"
+sha256="845821126d828b44b7125ba2d97d75ae39511d9c1b0fd1a1ef0ed3371be413e9"
+
+convert_from="otf"
+
+weight_map="
+400:Lora-Regular
+400i:Lora-Italic
+500:Lora-Medium
+500i:Lora-MediumItalic
+600:Lora-SemiBold
+600i:Lora-SemiBoldItalic
+700:Lora-Bold
+700i:Lora-BoldItalic
+"
+

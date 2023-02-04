@@ -43,7 +43,7 @@ case $1 in
         if [[ -e $1/info ]]; then
             id="$(basename $1)"
             TARGET_ID="$(dirname $1)/$id"
-            ( bash src/fbuild.sh $TARGET_ID full | tee buildlog.txt && id="$id" bash $0 thumbnail )
+            ( bash src/fbuild.sh $TARGET_ID full && id="$id" bash $0 thumbnail ) | tee buildlog.txt
         fi
         ;;
     fonts-relay/*)

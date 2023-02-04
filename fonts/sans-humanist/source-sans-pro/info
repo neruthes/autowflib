@@ -1,0 +1,28 @@
+id="source-sans-pro"
+family="Source Sans Pro"
+cat="sans-humanist"
+about="Adobe's first open source typeface family, was designed by Paul D. Hunt. It is a sans serif typeface intended to work well in user interfaces."
+infopage="https://fonts.adobe.com/fonts/source-sans"
+license="OFL"
+
+download="https://fonts.google.com/download?family=Source%20Sans%20Pro"
+format="zip"
+sha256="4f5f6a87498904815f8dd3db5ee35cec3812d3c55443f697ea834e4295aee437"
+
+convert_from="ttf"
+
+weight_map="
+700i:SourceSansPro-BlackItalic
+700:SourceSansPro-Black
+600i:SourceSansPro-BoldItalic
+600:SourceSansPro-Bold
+500i:SourceSansPro-SemiBoldItalic
+500:SourceSansPro-SemiBold
+400i:SourceSansPro-Italic
+400:SourceSansPro-Regular
+300i:SourceSansPro-LightItalic
+300:SourceSansPro-Light
+200i:SourceSansPro-ExtraLightItalic
+200:SourceSansPro-ExtraLight
+"
+

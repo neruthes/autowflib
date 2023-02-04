@@ -1,0 +1,26 @@
+id="eb-garamond"
+family="EB Garamond"
+cat="serif-humanist"
+about="EB Garamond is intended to be an excellent, classical, Garamond. It is a community project to create a revival of Claude Garamont’s famous humanist typefaces from the mid-16th century."
+infopage="https://github.com/georgd/EB-Garamond"
+license="OFL"
+
+download="https://fonts.google.com/download?family=EB%20Garamond"
+format="zip"
+sha256="1f596c398e83c86d3fd456196401125d0dea46b390fc1856bab04982247efb0f"
+
+convert_from="ttf"
+
+weight_map="
+400:EBGaramond-Regular
+400i:EBGaramond-Italic
+500:EBGaramond-Medium
+500i:EBGaramond-MediumItalic
+600:EBGaramond-SemiBold
+600i:EBGaramond-SemiBoldItalic
+700:EBGaramond-Bold
+700i:EBGaramond-BoldItalic
+800:EBGaramond-ExtraBold
+800i:EBGaramond-ExtraBoldItalic
+"
+

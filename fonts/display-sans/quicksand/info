@@ -1,0 +1,21 @@
+id="quicksand"
+family="Quicksand"
+cat="display-sans"
+about="Quicksand is a display sans serif with rounded terminals. The project was initiated by Andrew Paglinawan in 2008 using geometric shapes as a core foundation."
+infopage="https://github.com/andrew-paglinawan/QuicksandFamily"
+license="OFL"
+
+download="https://fonts.google.com/download?family=Quicksand"
+format="zip"
+sha256="ed41971fe0c089938607772dae574a8449ee2554b6d002c1326d3a2a01d56d18"
+
+convert_from="ttf"
+
+weight_map="
+300:Quicksand-Light
+400:Quicksand-Regular
+500:Quicksand-Medium
+600:Quicksand-SemiBold
+700:Quicksand-Bold
+"
+

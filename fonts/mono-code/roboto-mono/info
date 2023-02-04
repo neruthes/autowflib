@@ -1,0 +1,30 @@
+id="roboto-mono"
+family="Roboto Mono"
+cat="mono-code"
+about="Roboto Mono is optimized for readability on screens across a wide variety of devices and reading environments."
+infopage="https://fonts.google.com/specimen/Roboto+Mono/about"
+license="Apache"
+
+download="https://fonts.google.com/download?family=Roboto%20Mono"
+format="zip"
+sha256="bc034c576bcda5a12abe9d98e5814bbf8d3c7854d6c1367ec5a0ea94eca821ce"
+
+convert_from="ttf"
+
+weight_map="
+700i:RobotoMono-BoldItalic
+600i:RobotoMono-SemiBoldItalic
+500i:RobotoMono-MediumItalic
+400i:RobotoMono-Italic
+300i:RobotoMono-LightItalic
+200i:RobotoMono-ExtraLightItalic
+100i:RobotoMono-ThinItalic
+700:RobotoMono-Bold
+600:RobotoMono-SemiBold
+500:RobotoMono-Medium
+400:RobotoMono-Regular
+300:RobotoMono-Light
+200:RobotoMono-ExtraLight
+100:RobotoMono-Thin
+"
+

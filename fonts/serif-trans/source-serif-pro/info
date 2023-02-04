@@ -1,0 +1,28 @@
+id="source-serif-pro"
+family="Source Serif Pro"
+cat="serif-trans"
+about="Source Serif Pro is a serif typeface in the transitional style, designed to complement the Source Sans Pro family."
+infopage="https://github.com/adobe-fonts/source-serif"
+license="OFL"
+
+download="https://github.com/adobe-fonts/source-serif/releases/download/4.005R/source-serif-4.005_Desktop.zip"
+format="zip"
+sha256="549fdb8f9a682bd06944298621404969f6de77c2e422ff3b8244a1dcd6a0c425"
+
+convert_from="otf"
+
+weight_map="
+200:SourceSerif4-ExtraLight
+200i:SourceSerif4-ExtraLightIt
+300:SourceSerif4-Light
+300i:SourceSerif4-LightIt
+400:SourceSerif4-Regular
+400i:SourceSerif4-It
+500:SourceSerif4-Semibold
+500i:SourceSerif4-SemiboldIt
+600:SourceSerif4-Bold
+600i:SourceSerif4-BoldIt
+700:SourceSerif4-Black
+700i:SourceSerif4-BlackIt
+"
+
