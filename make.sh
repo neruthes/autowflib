@@ -31,26 +31,26 @@ paral="$(which paral)"
 case $1 in
     _all)
         for TARGET_ID in fonts/*/*; do
-            $paral bash src/fbuild.sh $TARGET_ID
+            $paral bash src/fbuild.sh "$TARGET_ID"
         done
         ;;
     css)
         for TARGET_ID in fonts/*/*; do
-            $paral bash src/fbuild.sh $TARGET_ID css_generate
+            $paral bash src/fbuild.sh "$TARGET_ID" css_generate
         done
         ;;
     fonts/*)
-        if [[ -e $1/info ]]; then
-            id="$(basename $1)"
-            TARGET_ID="$(dirname $1)/$id"
-            ( bash src/fbuild.sh $TARGET_ID full && id="$id" bash $0 thumbnail ) | tee buildlog.txt
+        if [[ -e "$1"/info ]]; then
+            id="$(basename "$1")"
+            TARGET_ID="$(dirname "$1")/$id"
+            ( bash src/fbuild.sh "$TARGET_ID" full && id="$id" bash "$0" thumbnail ) | tee buildlog.txt
         fi
         ;;
     fonts-relay/*)
-        if [[ -e $1/info ]]; then
-            id="$(basename $1)"
-            TARGET_ID="$(dirname $1)/$id"
-            (bash src/relay.sh $TARGET_ID full || exit 1) | tee buildlog.txt
+        if [[ -e "$1/info" ]]; then
+            id="$(basename "$1")"
+            TARGET_ID="$(dirname "$1")/$id"
+            (bash src/relay.sh "$TARGET_ID" full || exit 1) | tee buildlog.txt
         fi
         ;;
     thumbnail)
